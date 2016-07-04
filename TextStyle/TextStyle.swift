@@ -8,10 +8,6 @@
 
 import UIKit
 
-extension TextStyle {
-  
-  
-}
 class TextStyle {
   
 	enum CaseTrait {
