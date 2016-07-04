@@ -6,7 +6,7 @@
 //  Copyright © 2016 Aleksey Chernish. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension TextStyle {
   
@@ -22,4 +22,13 @@ extension TextStyle {
     return plainText.withSizeMultipliedBy(1.4).withForegroundColor(.orangeColor()).uppercase().bold()
   }
   
+  static var button: TextStyle {
+    let shadow = NSShadow()
+    shadow.shadowOffset = CGSize(width: 1, height: 1)
+    shadow.shadowBlurRadius = 1
+    shadow.shadowColor = UIColor.lightGrayColor()
+
+    return header.withForegroundColor(.blackColor()).withShadow(shadow)
+  }
+
 }

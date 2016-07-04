@@ -25,9 +25,21 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    label.attributedText = "Hello".withStyle(TextStyle.header)
+    navigationController?.navigationBar.applyAttributesFrom(TextStyle.header.withForegroundColor(.blackColor()))
+    
+    title = "Text style demo"
+    
+    label.attributedText = "about zebras".withStyle(TextStyle.header.withAlignment(.Center))
+
+    textField.applyAttributesFrom(.plainText)
+
+    textField.attributedPlaceholder = "search".withStyle(TextStyle.plainText.withForegroundColor(.lightGrayColor()).italic())
+    
+    let textViewText = "Zebras are several species of African equids (horse family) united by their distinctive black and white striped coats. Their stripes come in different patterns, unique to each individual."
+    
+    textview.attributedText = textViewText.withStyle(.plainText).applyStyle(.url, toOccurencesOf: "species")
+    
+    button.setAttributedTitle("Got it!".withStyle(.button), forState: .Normal)
   }
 
-
 }
-
