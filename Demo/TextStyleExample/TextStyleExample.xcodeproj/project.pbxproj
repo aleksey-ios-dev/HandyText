@@ -12,7 +12,15 @@
 		5BF5540A1D2A72520031DAB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF554081D2A72520031DAB9 /* Main.storyboard */; };
 		5BF5540C1D2A72520031DAB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5540B1D2A72520031DAB9 /* Assets.xcassets */; };
 		5BF5540F1D2A72520031DAB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5540D1D2A72520031DAB9 /* LaunchScreen.storyboard */; };
-		5BF554171D2A72C80031DAB9 /* TextStyle in Resources */ = {isa = PBXBuildFile; fileRef = 5BF554161D2A72C80031DAB9 /* TextStyle */; };
+		5BF554191D2A747A0031DAB9 /* ApplicationFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF554181D2A747A0031DAB9 /* ApplicationFonts.swift */; };
+		5BF554221D2A74D10031DAB9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5541B1D2A74D10031DAB9 /* Font.swift */; };
+		5BF554231D2A74D10031DAB9 /* NSAttributedString+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5541C1D2A74D10031DAB9 /* NSAttributedString+TextStyle.swift */; };
+		5BF554241D2A74D10031DAB9 /* String+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5541D1D2A74D10031DAB9 /* String+TextStyle.swift */; };
+		5BF554251D2A74D10031DAB9 /* TextStyle+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5541E1D2A74D10031DAB9 /* TextStyle+Modifiers.swift */; };
+		5BF554261D2A74D10031DAB9 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5541F1D2A74D10031DAB9 /* TextStyle.swift */; };
+		5BF554271D2A74D10031DAB9 /* TextStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF554201D2A74D10031DAB9 /* TextStyleApplicable.swift */; };
+		5BF554281D2A74D10031DAB9 /* UINavigationBar+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF554211D2A74D10031DAB9 /* UINavigationBar+TextStyle.swift */; };
+		5BF5542A1D2A74F60031DAB9 /* ApplicationStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF554291D2A74F60031DAB9 /* ApplicationStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +31,15 @@
 		5BF5540B1D2A72520031DAB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BF5540E1D2A72520031DAB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF554101D2A72520031DAB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BF554161D2A72C80031DAB9 /* TextStyle */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TextStyle; path = ../../TextStyle; sourceTree = "<group>"; };
+		5BF554181D2A747A0031DAB9 /* ApplicationFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFonts.swift; sourceTree = "<group>"; };
+		5BF5541B1D2A74D10031DAB9 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		5BF5541C1D2A74D10031DAB9 /* NSAttributedString+TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+TextStyle.swift"; sourceTree = "<group>"; };
+		5BF5541D1D2A74D10031DAB9 /* String+TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TextStyle.swift"; sourceTree = "<group>"; };
+		5BF5541E1D2A74D10031DAB9 /* TextStyle+Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextStyle+Modifiers.swift"; sourceTree = "<group>"; };
+		5BF5541F1D2A74D10031DAB9 /* TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		5BF554201D2A74D10031DAB9 /* TextStyleApplicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyleApplicable.swift; sourceTree = "<group>"; };
+		5BF554211D2A74D10031DAB9 /* UINavigationBar+TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+TextStyle.swift"; sourceTree = "<group>"; };
+		5BF554291D2A74F60031DAB9 /* ApplicationStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +56,7 @@
 		5BF553F81D2A72520031DAB9 = {
 			isa = PBXGroup;
 			children = (
-				5BF554161D2A72C80031DAB9 /* TextStyle */,
+				5BF5541A1D2A74D10031DAB9 /* TextStyle */,
 				5BF554031D2A72520031DAB9 /* TextStyleExample */,
 				5BF554021D2A72520031DAB9 /* Products */,
 			);
@@ -57,6 +73,8 @@
 		5BF554031D2A72520031DAB9 /* TextStyleExample */ = {
 			isa = PBXGroup;
 			children = (
+				5BF554181D2A747A0031DAB9 /* ApplicationFonts.swift */,
+				5BF554291D2A74F60031DAB9 /* ApplicationStyles.swift */,
 				5BF554041D2A72520031DAB9 /* AppDelegate.swift */,
 				5BF554061D2A72520031DAB9 /* ViewController.swift */,
 				5BF554081D2A72520031DAB9 /* Main.storyboard */,
@@ -65,6 +83,21 @@
 				5BF554101D2A72520031DAB9 /* Info.plist */,
 			);
 			path = TextStyleExample;
+			sourceTree = "<group>";
+		};
+		5BF5541A1D2A74D10031DAB9 /* TextStyle */ = {
+			isa = PBXGroup;
+			children = (
+				5BF5541B1D2A74D10031DAB9 /* Font.swift */,
+				5BF5541C1D2A74D10031DAB9 /* NSAttributedString+TextStyle.swift */,
+				5BF5541D1D2A74D10031DAB9 /* String+TextStyle.swift */,
+				5BF5541E1D2A74D10031DAB9 /* TextStyle+Modifiers.swift */,
+				5BF5541F1D2A74D10031DAB9 /* TextStyle.swift */,
+				5BF554201D2A74D10031DAB9 /* TextStyleApplicable.swift */,
+				5BF554211D2A74D10031DAB9 /* UINavigationBar+TextStyle.swift */,
+			);
+			name = TextStyle;
+			path = ../../TextStyle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +161,6 @@
 				5BF5540F1D2A72520031DAB9 /* LaunchScreen.storyboard in Resources */,
 				5BF5540C1D2A72520031DAB9 /* Assets.xcassets in Resources */,
 				5BF5540A1D2A72520031DAB9 /* Main.storyboard in Resources */,
-				5BF554171D2A72C80031DAB9 /* TextStyle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +171,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF554281D2A74D10031DAB9 /* UINavigationBar+TextStyle.swift in Sources */,
+				5BF554261D2A74D10031DAB9 /* TextStyle.swift in Sources */,
+				5BF554221D2A74D10031DAB9 /* Font.swift in Sources */,
+				5BF554231D2A74D10031DAB9 /* NSAttributedString+TextStyle.swift in Sources */,
 				5BF554071D2A72520031DAB9 /* ViewController.swift in Sources */,
+				5BF554271D2A74D10031DAB9 /* TextStyleApplicable.swift in Sources */,
+				5BF554191D2A747A0031DAB9 /* ApplicationFonts.swift in Sources */,
 				5BF554051D2A72520031DAB9 /* AppDelegate.swift in Sources */,
+				5BF554251D2A74D10031DAB9 /* TextStyle+Modifiers.swift in Sources */,
+				5BF5542A1D2A74F60031DAB9 /* ApplicationStyles.swift in Sources */,
+				5BF554241D2A74D10031DAB9 /* String+TextStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

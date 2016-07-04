@@ -10,14 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet
+  private weak var label: UILabel!
+  
+  @IBOutlet
+  private weak var textField: UITextField!
+  
+  @IBOutlet
+  private weak var textview: UITextView!
+  
+  @IBOutlet
+  private weak var button: UIButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+    
+    label.attributedText = "Hello".withStyle(TextStyle.header)
   }
 
 
