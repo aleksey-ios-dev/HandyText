@@ -5,6 +5,13 @@ Purpose
 --------------
 TextStyle is a helper library that allows to create and manage text styles in clear declarative manner.
 
+Problem solved
+--------------
+
+Work on UI tasks is full of repetition when it goes about defining text appearance. You have to refer to mockups all the time, or to search and copy elements of same appearance. Both ways leave many ways for errors, and both make late changes in design quite painful. Amount of work for changing a font in typical elements is proportional to project's size.
+The alternative way is in avoiding the use of IB for defining text appearance, but handling it in code. 
+
+
 Supported OS & SDK Versions
 -----------------------------
 
@@ -31,19 +38,13 @@ extension TextStyle {
   }
 }
 
-Font is only required parameter for creating a brand new style, all other params are set do defaults. Instead of copying instances and modifying properties the library proposes more declarative 'cascade' style. Think you need a style for headers based on plain text:
+The Font is only required parameter for creating a brand new style, all other params are set do defaults. Instead of copying instances and modifying properties the library proposes more declarative 'cascade' style. Think you need a style for headers based on plain text:
 
   static var header1: TextStyle {
     return plainText.withSizeMultipliedBy(1.4).uppercase().bold()
   }
 
-  Text for page heading is larger and is colored orange:
-
-  static var pageHeading: TextStyle {
-    return header1.withForegroundColor(.orangeColor())
-  }
-
-  Somewhere in text will be clickable links. They will have same font and size as plain text, but italic, blue and underlined:
+In text there also will be clickable links. Links will have same font and size as plain text, but italic, blue and underlined:
 
   static func url(link: String) -> TextStyle {
     return plainText.withForegroundColor(.blueColor()).italic().withUnderline(.StyleSingle).withLink(link)
@@ -54,10 +55,8 @@ It's remarkable that styles are chained, in other words based on each other. Cha
 Attributed strings
 ----------------
 
-The costs of using
-
-
-
+The costs of using text styles is switching to attributed text, which is supported by the most of UIKit classes.
+self.testLabel.attributedText = "Hello World".withStyle(.plainText)
 
 
 
