@@ -4,7 +4,6 @@ TextStyle
 Purpose
 --------------
 TextStyle is a helper library that allows to create and manage text styles in clear declarative manner.
-Instead of 
 
 Supported OS & SDK Versions
 -----------------------------
@@ -20,6 +19,47 @@ Copy contents of TextStyle directory to your project. Declare own text styles as
 Version 1.0
 
 - Release version.
+
+Usage
+--------------
+
+First, let's define some text styles:
+
+extension TextStyle {
+  static var plainText: TextStyle {
+    return TextStyle(font: .Avenir)
+  }
+}
+
+Font is only required parameter for creating a brand new style, all other params are set do defaults. Instead of copying instances and modifying properties the library proposes more declarative 'cascade' style. Think you need a style for headers based on plain text:
+
+  static var header1: TextStyle {
+    return plainText.withSizeMultipliedBy(1.4).uppercase().bold()
+  }
+
+  Text for page heading is larger and is colored orange:
+
+  static var pageHeading: TextStyle {
+    return header1.withForegroundColor(.orangeColor())
+  }
+
+  Somewhere in text will be clickable links. They will have same font and size as plain text, but italic, blue and underlined:
+
+  static func url(link: String) -> TextStyle {
+    return plainText.withForegroundColor(.blueColor()).italic().withUnderline(.StyleSingle).withLink(link)
+  }
+
+It's remarkable that styles are chained, in other words based on each other. Changing basic style font to .Georgia makes all style scheme look different, but still well aligned.
+
+Attributed strings
+----------------
+
+The costs of using
+
+
+
+
+
 
 License
 ----------------

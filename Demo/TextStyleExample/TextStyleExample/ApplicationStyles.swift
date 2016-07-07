@@ -14,12 +14,16 @@ extension TextStyle {
     return TextStyle(font: .Avenir)
   }
   
-  static var url: TextStyle {
-    return plainText.withForegroundColor(.blueColor()).italic().withUnderline(.StyleSingle)
+  static func url(link: String) -> TextStyle {
+    return plainText.withForegroundColor(.blueColor()).italic().withUnderline(.StyleSingle).withLink(link)
   }
   
-  static var header: TextStyle {
+  static var header1: TextStyle {
     return plainText.withSizeMultipliedBy(1.4).withForegroundColor(.orangeColor()).uppercase().bold()
+  }
+  
+  static var header2: TextStyle {
+    return header1.withSizeMultipliedBy(1.2).withForegroundColor(.orangeColor())
   }
   
   static var button: TextStyle {
