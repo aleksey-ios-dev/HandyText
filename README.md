@@ -32,23 +32,29 @@ Usage
 
 First, let's define some text styles:
 
+```swift
 extension TextStyle {
   static var plainText: TextStyle {
     return TextStyle(font: .Avenir)
   }
 }
+```
 
 The Font is only required parameter for creating a brand new style, all other params are set do defaults. Instead of copying instances and modifying properties the library proposes more declarative 'cascade' style. Think you need a style for headers based on plain text:
 
+```swift
   static var header1: TextStyle {
     return plainText.withSizeMultipliedBy(1.4).uppercase().bold()
   }
+```
 
 In text there also will be clickable links. Links will have same font and size as plain text, but italic, blue and underlined:
 
+```swift
   static func url(link: String) -> TextStyle {
     return plainText.withForegroundColor(.blueColor()).italic().withUnderline(.StyleSingle).withLink(link)
   }
+```
 
 It's remarkable that styles are chained, in other words based on each other. Changing basic style font to .Georgia makes all style scheme look different, but still well aligned.
 
@@ -56,9 +62,10 @@ Attributed strings
 ----------------
 
 The costs of using text styles is switching to attributed text, which is supported by the most of UIKit classes.
+
+```swift
 self.testLabel.attributedText = "Hello World".withStyle(.plainText)
-
-
+```
 
 License
 ----------------
