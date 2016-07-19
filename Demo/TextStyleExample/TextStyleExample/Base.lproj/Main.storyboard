@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WS8-pY-3Wq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="S6Q-Gf-Ims">
+            <objects>
+                <navigationController id="WS8-pY-3Wq" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="100"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="24h-3b-AMI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k06-2m-Dyr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Odp-gH-b9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="85"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextStyleExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jM0-XJ-PaI">
+                                <rect key="frame" x="20" y="87" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ky-PZ-JbU">
+                                <rect key="frame" x="20" y="116" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FaP-xN-ZwV">
+                                <rect key="frame" x="20" y="166" width="280" height="322"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ6-eq-Ag9">
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KZ6-eq-Ag9" firstAttribute="top" secondItem="FaP-xN-ZwV" secondAttribute="bottom" constant="30" id="5xG-gH-BYf"/>
+                            <constraint firstItem="jM0-XJ-PaI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="GJL-sa-IGx"/>
+                            <constraint firstItem="jM0-XJ-PaI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Htv-P3-NLL"/>
+                            <constraint firstItem="FaP-xN-ZwV" firstAttribute="top" secondItem="0Ky-PZ-JbU" secondAttribute="bottom" constant="20" id="NWL-7O-sx6"/>
+                            <constraint firstItem="0Ky-PZ-JbU" firstAttribute="top" secondItem="jM0-XJ-PaI" secondAttribute="bottom" constant="8" id="Nef-gM-Q5l"/>
+                            <constraint firstAttribute="trailing" secondItem="FaP-xN-ZwV" secondAttribute="trailing" constant="20" id="Qph-4s-ACK"/>
+                            <constraint firstAttribute="trailing" secondItem="jM0-XJ-PaI" secondAttribute="trailing" constant="20" id="UHJ-Mi-jak"/>
+                            <constraint firstItem="0Ky-PZ-JbU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bCN-6q-cXG"/>
+                            <constraint firstItem="KZ6-eq-Ag9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="eff-U7-kKa"/>
+                            <constraint firstAttribute="trailing" secondItem="0Ky-PZ-JbU" secondAttribute="trailing" constant="20" id="fqA-CB-KK6"/>
+                            <constraint firstAttribute="trailing" secondItem="KZ6-eq-Ag9" secondAttribute="trailing" constant="20" id="ghK-sa-pSj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KZ6-eq-Ag9" secondAttribute="bottom" constant="20" id="nPY-KX-9SK"/>
+                            <constraint firstItem="FaP-xN-ZwV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="p6Y-wx-8Nb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9QJ-Ub-ZJp"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="button" destination="KZ6-eq-Ag9" id="1cq-Op-PjB"/>
+                        <outlet property="label" destination="jM0-XJ-PaI" id="SBc-2O-pJa"/>
+                        <outlet property="textField" destination="0Ky-PZ-JbU" id="18b-yD-Rdx"/>
+                        <outlet property="textview" destination="FaP-xN-ZwV" id="cGo-cd-h8N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="592"/>
+        </scene>
+    </scenes>
+</document>

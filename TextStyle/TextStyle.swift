@@ -8,10 +8,6 @@
 
 import UIKit
 
-extension TextStyle {
-  
-  
-}
 class TextStyle {
   
 	enum CaseTrait {
@@ -21,21 +17,24 @@ class TextStyle {
   var textAttributes = [String: AnyObject]()
 	
   var font: Font {
-    didSet {
-      refreshFont()
-    }
+    didSet { refreshFont() }
   }
   
   var size = UIFont.preferredFontForTextStyle(UIFontTextStyleBody).pointSize {
-    didSet {
-      refreshFont()
-    }
+    didSet { refreshFont() }
   }
 
-	var thickness = Font.Thickness.Regular
-	var caseTrait: CaseTrait = .Normal
+  var thickness = Font.Thickness.Regular {
+    didSet { refreshFont() }
+  }
+  
+  var caseTrait: CaseTrait = .Normal {
+    didSet { refreshFont() }
+  }
 
-	var isItalic = false
+  var isItalic = false {
+    didSet { refreshFont() }
+  }
   
   var paragraphStyle: NSMutableParagraphStyle {
     get {

@@ -6,7 +6,7 @@
 //  Copyright © 2016 aleksey chernish. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UINavigationBar {
   
