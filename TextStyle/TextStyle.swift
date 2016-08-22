@@ -110,5 +110,17 @@ class TextStyle {
   private func refreshFont() {
     textAttributes[NSFontAttributeName] = UIFont.init(name: typeface, size: size)
   }
+  
+  func copy() -> TextStyle {
+    let copy = TextStyle(font: font)
+    copy.textAttributes = textAttributes
+    copy.size = size
+    copy.thickness = thickness
+    copy.caseTrait = caseTrait
+    copy.isItalic = isItalic
+    copy.paragraphStyle = paragraphStyle
+    
+    return copy;
+  }
 	
 }

@@ -13,205 +13,240 @@ extension TextStyle {
   //MARK: - Fill color
   
   func withForegroundColor(color: UIColor) -> TextStyle {
-    textAttributes[NSForegroundColorAttributeName] = color
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSForegroundColorAttributeName] = color
+    return copy
   }
   
   func withBackgroundColor(color: UIColor) -> TextStyle {
-    textAttributes[NSBackgroundColorAttributeName] = color
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSBackgroundColorAttributeName] = color
+    return copy
   }
   
   //MARK: - Size
   
   func withSize(size: CGFloat) -> TextStyle {
-    self.size = size
-    return self
+    let copy = self.copy()
+    copy.size = size
+    return copy
   }
   
   func withSizeIncrementedBy(increment: CGFloat) -> TextStyle {
-    size += increment
-    return self
+    let copy = self.copy()
+    copy.size += increment
+    return copy
   }
   
   func withSizeMultipliedBy(multiplicator: CGFloat) -> TextStyle {
-    size *= multiplicator
-    return self
+    let copy = self.copy()
+    copy.size *= multiplicator
+    return copy
   }
   
-  func withDynamicFontStyle(size: DynamicFontStyle) -> TextStyle {
-    self.size = UIFont.preferredFontForTextStyle(size.literal).pointSize
-    return self
+  func withDynamicFontStyle(style: DynamicFontStyle) -> TextStyle {
+    let copy = self.copy()
+    copy.size = UIFont.preferredFontForTextStyle(style.literal).pointSize
+    return copy
   }
   
   //MARK: - Thickness
 
   func extralight() -> TextStyle {
-    self.thickness = .Extralight
-    return self
+    let copy = self.copy()
+    copy.thickness = .Extralight
+    return copy
   }
   
   func light() -> TextStyle {
-    self.thickness = .Light
-    return self
+    let copy = self.copy()
+    copy.thickness = .Light
+    return copy
   }
   
   func regular() -> TextStyle {
-    self.thickness = .Regular
-    return self
+    let copy = self.copy()
+    copy.thickness = .Regular
+    return copy
   }
   
   func medium() -> TextStyle {
-    self.thickness = .Medium
-    return self
+    let copy = self.copy()
+    copy.thickness = .Medium
+    return copy
   }
   
   func bold() -> TextStyle {
-    self.thickness = .Bold
-    return self
+    let copy = self.copy()
+    copy.thickness = .Bold
+    return copy
   }
   
   func heavy() -> TextStyle {
-    self.thickness = .Heavy
-    return self
+    let copy = self.copy()
+    copy.thickness = .Heavy
+    return copy
   }
   
   func extraheavy() -> TextStyle {
-    self.thickness = .Extraheavy
-    return self
+    let copy = self.copy()
+    copy.thickness = .Extraheavy
+    return copy
   }
   
   //MARK: - Slant
   
   func italic() -> TextStyle {
-    self.isItalic = true
-    return self
+    let copy = self.copy()
+    copy.isItalic = true
+    return copy
   }
   
   func straight() -> TextStyle {
-    self.isItalic = false
-    return self
+    let copy = self.copy()
+    copy.isItalic = false
+    return copy
   }
   
   //MARK: - Case Trait, mutually exclusive
   
   func capitalized() -> TextStyle {
-    caseTrait = .Capitalized
-    return self
+    let copy = self.copy()
+    copy.caseTrait = .Capitalized
+    return copy
   }
   
   func lowercase() -> TextStyle {
-    caseTrait = .Lowercase
-    return self
+    let copy = self.copy()
+    copy.caseTrait = .Lowercase
+    return copy
   }
   
   func uppercase() -> TextStyle {
-    caseTrait = .Uppercase
-    return self
+    let copy = self.copy()
+    copy.caseTrait = .Uppercase
+    return copy
   }
   
   func normalCase() -> TextStyle {
-    caseTrait = .Normal
-    return self
+    let copy = self.copy()
+    copy.caseTrait = .Normal
+    return copy
   }
   
   //MARK: - Underline
   
   func withUnderline(style: NSUnderlineStyle) -> TextStyle {
-    textAttributes[NSUnderlineStyleAttributeName] = style.rawValue
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSUnderlineStyleAttributeName] = style.rawValue
+    return copy
   }
   
   func withUnderlineColor(color: UIColor?) -> TextStyle {
-    textAttributes[NSUnderlineColorAttributeName] = color
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSUnderlineColorAttributeName] = color
+    return copy
   }
   
   //MARK: - Strikethrough
   
   func withStrikethrough(strikethrough: Bool) -> TextStyle {
-    textAttributes[NSStrikethroughStyleAttributeName] = strikethrough
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSStrikethroughStyleAttributeName] = strikethrough
+    return copy
   }
   
   func withStrikethroughColor(color: UIColor?) -> TextStyle {
-    textAttributes[NSStrikethroughColorAttributeName] = color
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSStrikethroughColorAttributeName] = color
+    return copy
   }
   
   //MARK: - Stroke
   
   func withStrokeWidth(width: CGFloat) -> TextStyle {
-    textAttributes[NSStrokeWidthAttributeName] = width
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSStrokeWidthAttributeName] = width
+    return copy
   }
 
   func withStrokeColor(color: UIColor?) -> TextStyle {
-    textAttributes[NSStrokeColorAttributeName] = color
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSStrokeColorAttributeName] = color
+    return copy
   }
   
   //MARK: - Shadow
   
   func withShadow(shadow: NSShadow?) -> TextStyle {
-    textAttributes[NSShadowAttributeName] = shadow
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSShadowAttributeName] = shadow
+    return copy
   }
   
   //MARK: - Link 
   
   func withLink(link: String?) -> TextStyle {
+    let copy = self.copy()
     if let link = link {
-      textAttributes[NSLinkAttributeName] = NSURL(string: link)
+      copy.textAttributes[NSLinkAttributeName] = NSURL(string: link)
     } else {
-      textAttributes[NSLinkAttributeName] = nil
+      copy.textAttributes[NSLinkAttributeName] = nil
     }
-    return self
+    return copy
   }
   
   //MARK: - Offset
   
   func withAbsoluteBaselineOffset(offset: CGFloat) -> TextStyle {
-    textAttributes[NSBaselineOffsetAttributeName] = offset
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSBaselineOffsetAttributeName] = offset
+    return copy
   }
   
   func withRelativeBaselineOffset(ratio: CGFloat) -> TextStyle {
-    textAttributes[NSBaselineOffsetAttributeName] = size * ratio
-    return self
+    let copy = self.copy()
+    copy.textAttributes[NSBaselineOffsetAttributeName] = size * ratio
+    return copy
   }
   
   //MARK: - Paragraph style options
   
   func withParagraphStyle(style: NSParagraphStyle) -> TextStyle {
-    paragraphStyle = style.mutableCopy() as! NSMutableParagraphStyle
+    let copy = self.copy()
+    copy.paragraphStyle = style.mutableCopy() as! NSMutableParagraphStyle
   
-    return self
+    return copy
   }
   
   func withHeadIndent(indent: CGFloat) -> TextStyle {
-    paragraphStyle.headIndent = indent
-    return self
+    let copy = self.copy()
+    copy.paragraphStyle.headIndent = indent
+    return copy
   }
   
   func withFirstLineIndent(indent: CGFloat) -> TextStyle {
-    paragraphStyle.firstLineHeadIndent = indent
-    return self
+    let copy = self.copy()
+    copy.paragraphStyle.firstLineHeadIndent = indent
+    return copy
   }
   
   func withParagraphSpacing(spacing: CGFloat) -> TextStyle {
-    paragraphStyle.paragraphSpacing = spacing
-    return self
+    let copy = self.copy()
+    copy.paragraphStyle.paragraphSpacing = spacing
+    return copy
   }
 
   func withParagraphSpacingBefore(spacing: CGFloat) -> TextStyle {
-    paragraphStyle.paragraphSpacingBefore = spacing
-    return self
+    let copy = self.copy()
+    copy.paragraphStyle.paragraphSpacingBefore = spacing
+    return copy
   }
 
   func withAlignment(alignment: NSTextAlignment) -> TextStyle {
-    paragraphStyle.alignment = alignment
-    return self
+    let copy = self.copy()
+    copy.paragraphStyle.alignment = alignment
+    return copy
   }
 
 }

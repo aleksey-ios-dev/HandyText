@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     title = "Text style demo"
     
-    label.attributedText = "about zebras".withStyle(TextStyle.header.withAlignment(.Center))
+    label.attributedText = "about <i>zebras</i>".withStyle(.header, tagMap: .defaultMap)
 
     textField.applyAttributesFrom(.plainText)
 

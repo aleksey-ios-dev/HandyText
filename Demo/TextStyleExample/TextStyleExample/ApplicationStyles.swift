@@ -32,3 +32,16 @@ extension TextStyle {
   }
 
 }
+
+extension TagMap {
+  
+  static var defaultMap: TagMap {
+    let map = TagMap()
+    map.forTag("b") { $0.bold() }
+    map.forTag("i") { $0.italic().withUnderline(.StyleSingle) }
+    map.forTag("u") { $0.uppercase() }
+    
+    return map
+  }
+  
+}

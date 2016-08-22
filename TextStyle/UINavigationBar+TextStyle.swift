@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UINavigationBar {
+extension UINavigationBar: TextStyleApplicable {
   
   func applyAttributesFrom(style: TextStyle) {
     titleTextAttributes = style.textAttributes
