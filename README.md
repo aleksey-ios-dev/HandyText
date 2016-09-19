@@ -85,7 +85,8 @@ To convert a string into an attributed string:
 let result = "about <i>zebras</i>".withStyle(.plainText, tagScheme: scheme)
 ```
 
-Nested tags are supported. Text marked as following "<i><b>lions</b></i>" will be bold italic.
+Nested tags are supported. Text marked as following ```"<i><b>lions</b></i>"``` will be bold italic.
+
 
 Highlighting words
 ----------------
