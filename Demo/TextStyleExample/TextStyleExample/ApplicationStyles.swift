@@ -11,7 +11,7 @@ import UIKit
 extension TextStyle {
   
   static var plainText: TextStyle {
-    return TextStyle(font: .Avenir)
+    return TextStyle(font: .Georgia).withSize(20)
   }
   
   static var url: TextStyle {
@@ -33,15 +33,15 @@ extension TextStyle {
 
 }
 
-extension TagMap {
+extension TagScheme {
   
-  static var defaultMap: TagMap {
-    let map = TagMap()
-    map.forTag("b") { $0.bold() }
-    map.forTag("i") { $0.italic().withUnderline(.StyleSingle) }
-    map.forTag("u") { $0.uppercase() }
+  static var `default`: TagScheme {
+    let scheme = TagScheme()
+    scheme.forTag("b") { $0.bold() }
+    scheme.forTag("i") { $0.italic().withUnderline(.StyleSingle) }
+    scheme.forTag("u") { $0.uppercase() }
     
-    return map
+    return scheme
   }
   
 }

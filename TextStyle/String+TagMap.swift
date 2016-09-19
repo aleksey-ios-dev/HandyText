@@ -10,12 +10,12 @@ import Foundation
 
 extension String {
   
-  func withStyle(style: TextStyle, tagMap: TagMap) -> NSAttributedString {
+  func withStyle(style: TextStyle, tagScheme: TagScheme) -> NSAttributedString {
     let result = NSMutableAttributedString()
     
     for (tag, substring) in decompose() {
       if let tag = tag, let substring = substring {
-        result.appendAttributedString(substring.withStyle(tagMap.modifierFor(tag)(style), tagMap: tagMap))
+        result.appendAttributedString(substring.withStyle(tagScheme.modifierFor(tag)(style), tagScheme: tagScheme))
       } else if let substring = substring {
         result.appendAttributedString(substring.withStyle(style))
       }

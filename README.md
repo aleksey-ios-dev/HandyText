@@ -67,6 +67,36 @@ The costs of using text styles is switching to attributed text, which is support
 self.testLabel.attributedText = "Hello World".withStyle(.plainText)
 ```
 
+Tag parser
+----------------
+
+For displaying strings with tags you define a tag scheme:
+
+```swift
+    let scheme = TagScheme()
+    scheme.forTag("b") { $0.bold() }
+    scheme.forTag("i") { $0.italic() }
+```
+In the scheme for each custom tag you register a block defining the modification of the initial text style.
+
+To convert a string into an attributed string:
+
+```swift
+let result = "about <i>zebras</i>".withStyle(.plainText, tagScheme: scheme)
+```
+
+Nested tags are supported. Text marked as following "<i><b>lions</b></i>" will be bold italic.
+
+Highlighting words
+----------------
+
+You can highlight specific substrings with a different text style:
+
+```swift
+let highlightedString = "African equids".withStyle(.plainText).applyStyle(.header, toOccurencesOf: "African")
+```
+
+
 License
 ----------------
 

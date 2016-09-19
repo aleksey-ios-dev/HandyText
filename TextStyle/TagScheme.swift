@@ -1,5 +1,5 @@
 //
-//  TagMap.swift
+//  TagScheme.swift
 //  TextStyleExample
 //
 //  Created by Aleksey on 21.08.16.
@@ -11,7 +11,7 @@ import Foundation
 typealias TextStyleModifier = TextStyle -> TextStyle
 typealias Tag = String
 
-class TagMap {
+class TagScheme {
   
   private var map = [Tag: TextStyleModifier]()
   

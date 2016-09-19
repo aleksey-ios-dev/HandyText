@@ -28,8 +28,8 @@ class ViewController: UIViewController {
     navigationController?.navigationBar.applyAttributesFrom(TextStyle.header.withForegroundColor(.blackColor()))
     
     title = "Text style demo"
-    
-    label.attributedText = "about <i>zebras</i>".withStyle(.header, tagMap: .defaultMap)
+     
+    label.attributedText = "about <i>zebras</i>".withStyle(.header, tagScheme: .`default`)
 
     textField.applyAttributesFrom(.plainText)
 
