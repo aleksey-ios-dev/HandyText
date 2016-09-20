@@ -15,12 +15,14 @@ extension TextStyle {
   func withForegroundColor(color: UIColor) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSForegroundColorAttributeName] = color
+    copy.refreshOpacity()
     return copy
   }
   
   func withBackgroundColor(color: UIColor) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSBackgroundColorAttributeName] = color
+    copy.refreshOpacity()
     return copy
   }
   
@@ -145,6 +147,7 @@ extension TextStyle {
   func withUnderlineColor(color: UIColor?) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSUnderlineColorAttributeName] = color
+    refreshOpacity()
     return copy
   }
   
@@ -181,6 +184,14 @@ extension TextStyle {
   func withShadow(shadow: NSShadow?) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSShadowAttributeName] = shadow
+    return copy
+  }
+  
+  // MARK: - Opacity
+  
+  func withOpacity(opacity: CGFloat) -> TextStyle {
+    let copy = self.copy()
+    copy.opacity = opacity
     return copy
   }
   
@@ -247,6 +258,13 @@ extension TextStyle {
     let copy = self.copy()
     copy.paragraphStyle.alignment = alignment
     return copy
+  }
+  
+  // MARK: - Private
+
+  private func refreshOpacity() {
+    let newOpacity = self.opacity
+    self.opacity = newOpacity
   }
 
 }

@@ -14,7 +14,12 @@ class TextStyle {
 		case Normal, Capitalized, Lowercase, Uppercase
 	}
   
-  var textAttributes = [String: AnyObject]()
+  var textAttributes: [String: AnyObject] = {
+    var attributes = [String: AnyObject]()
+    attributes[NSForegroundColorAttributeName] = UIColor.blackColor()
+    
+    return attributes
+  }()
 	
   var font: Font {
     didSet { refreshFont() }
@@ -48,6 +53,30 @@ class TextStyle {
     }
     set {
       textAttributes[NSParagraphStyleAttributeName] = newValue
+    }
+  }
+  
+  var opacity: CGFloat = 1.0 {
+    didSet {
+      if let foregroundColor = textAttributes[NSForegroundColorAttributeName] as? UIColor {
+        textAttributes[NSForegroundColorAttributeName] = foregroundColor.colorWithAlphaComponent(opacity)
+      }
+      
+      if let backgroundColor = textAttributes[NSBackgroundColorAttributeName] as? UIColor {
+        textAttributes[NSBackgroundColorAttributeName] = backgroundColor.colorWithAlphaComponent(opacity)
+      }
+      
+      if let underlineColor = textAttributes[NSUnderlineColorAttributeName] as? UIColor {
+        textAttributes[NSUnderlineColorAttributeName] = underlineColor.colorWithAlphaComponent(opacity)
+      }
+      
+      if let strikeThroughColor = textAttributes[NSStrikethroughColorAttributeName] as? UIColor {
+        textAttributes[NSStrikethroughColorAttributeName] = strikeThroughColor.colorWithAlphaComponent(opacity)
+      }
+      
+      if let strokeColor = textAttributes[NSStrokeColorAttributeName] as? UIColor {
+        textAttributes[NSStrokeColorAttributeName] = strokeColor.colorWithAlphaComponent(opacity)
+      }
     }
   }
 	
@@ -119,6 +148,7 @@ class TextStyle {
     copy.caseTrait = caseTrait
     copy.isItalic = isItalic
     copy.paragraphStyle = paragraphStyle
+    copy.opacity = opacity
     
     return copy;
   }
