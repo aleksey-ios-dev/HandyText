@@ -150,7 +150,7 @@ class TextStyle {
     copy.paragraphStyle = paragraphStyle
     copy.opacity = opacity
     
-    return copy;
+    return copy
   }
 	
 }

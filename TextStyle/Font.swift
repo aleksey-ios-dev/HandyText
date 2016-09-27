@@ -26,7 +26,7 @@ struct Font {
   let heavyItalic: String
   let extraheavy: String
   let extraheavyItalic: String
-  
+		
   init(
     extralight: String = "",
     extralightItalic: String = "",

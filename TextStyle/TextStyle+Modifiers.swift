@@ -10,6 +10,12 @@ import UIKit
 
 extension TextStyle {
   
+  //MARK: - Based on
+  
+  class func based(on style: TextStyle) -> TextStyle {
+    return style.copy()
+  }
+  
   //MARK: - Fill color
   
   func withForegroundColor(color: UIColor) -> TextStyle {
@@ -257,6 +263,20 @@ extension TextStyle {
   func withAlignment(alignment: NSTextAlignment) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle.alignment = alignment
+    return copy
+  }
+  
+  func withLineSpacing(spacing: CGFloat) -> TextStyle {
+    let copy = self.copy()
+    copy.paragraphStyle.lineSpacing = spacing
+    return copy
+  }
+  
+  // MARK: - Letter spacing
+  
+  func withLetterSpacing(spacing: CGFloat) -> TextStyle {
+    let copy = self.copy()
+    copy.textAttributes[NSKernAttributeName] = spacing
     return copy
   }
   
