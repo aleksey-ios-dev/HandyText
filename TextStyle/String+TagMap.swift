@@ -15,7 +15,7 @@ extension String {
     
     for (tag, substring) in decompose() {
       if let tag = tag, let substring = substring {
-        result.appendAttributedString(substring.withStyle(tagScheme.modifierFor(tag)(style), tagScheme: tagScheme))
+        result.appendAttributedString(substring.withStyle(tagScheme.modifier(for: tag)(style), tagScheme: tagScheme))
       } else if let substring = substring {
         result.appendAttributedString(substring.withStyle(style))
       }
