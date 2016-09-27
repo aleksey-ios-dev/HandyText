@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0084EA5D1D99FAE700D4FC3C /* String+TagScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0084EA5C1D99FAE700D4FC3C /* String+TagScheme.swift */; };
 		5B6394EC1D69943E00856180 /* TagScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6394EB1D69943E00856180 /* TagScheme.swift */; };
-		5B6394EE1D6994C100856180 /* String+TagMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6394ED1D6994C100856180 /* String+TagMap.swift */; };
 		5BF554051D2A72520031DAB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF554041D2A72520031DAB9 /* AppDelegate.swift */; };
 		5BF554071D2A72520031DAB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF554061D2A72520031DAB9 /* ViewController.swift */; };
 		5BF5540A1D2A72520031DAB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF554081D2A72520031DAB9 /* Main.storyboard */; };
@@ -26,8 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0084EA5C1D99FAE700D4FC3C /* String+TagScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TagScheme.swift"; sourceTree = "<group>"; };
 		5B6394EB1D69943E00856180 /* TagScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagScheme.swift; sourceTree = "<group>"; };
-		5B6394ED1D6994C100856180 /* String+TagMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TagMap.swift"; sourceTree = "<group>"; };
 		5BF554011D2A72520031DAB9 /* TextStyleExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextStyleExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF554041D2A72520031DAB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF554061D2A72520031DAB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,10 +94,10 @@
 			children = (
 				5BF5541B1D2A74D10031DAB9 /* Font.swift */,
 				5B6394EB1D69943E00856180 /* TagScheme.swift */,
-				5B6394ED1D6994C100856180 /* String+TagMap.swift */,
 				5BF5541C1D2A74D10031DAB9 /* NSAttributedString+TextStyle.swift */,
 				5BF5541D1D2A74D10031DAB9 /* String+TextStyle.swift */,
 				5BF5541E1D2A74D10031DAB9 /* TextStyle+Modifiers.swift */,
+				0084EA5C1D99FAE700D4FC3C /* String+TagScheme.swift */,
 				5BF5541F1D2A74D10031DAB9 /* TextStyle.swift */,
 				5BF554201D2A74D10031DAB9 /* TextStyleApplicable.swift */,
 				5BF554211D2A74D10031DAB9 /* UINavigationBar+TextStyle.swift */,
@@ -181,9 +181,9 @@
 				5BF554261D2A74D10031DAB9 /* TextStyle.swift in Sources */,
 				5BF554221D2A74D10031DAB9 /* Font.swift in Sources */,
 				5BF554231D2A74D10031DAB9 /* NSAttributedString+TextStyle.swift in Sources */,
+				0084EA5D1D99FAE700D4FC3C /* String+TagScheme.swift in Sources */,
 				5BF554071D2A72520031DAB9 /* ViewController.swift in Sources */,
 				5B6394EC1D69943E00856180 /* TagScheme.swift in Sources */,
-				5B6394EE1D6994C100856180 /* String+TagMap.swift in Sources */,
 				5BF554271D2A74D10031DAB9 /* TextStyleApplicable.swift in Sources */,
 				5BF554191D2A747A0031DAB9 /* ApplicationFonts.swift in Sources */,
 				5BF554051D2A72520031DAB9 /* AppDelegate.swift in Sources */,
