@@ -236,6 +236,12 @@ extension TextStyle {
     return copy
   }
   
+  func withLineBreakMode(mode: NSLineBreakMode) -> TextStyle {
+    let copy = self.copy()
+    copy.paragraphStyle.lineBreakMode = mode
+    return copy
+  }
+  
   func withHeadIndent(indent: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle.headIndent = indent
@@ -271,6 +277,7 @@ extension TextStyle {
     copy.paragraphStyle.lineSpacing = spacing
     return copy
   }
+  
   
   // MARK: - Letter spacing
   
