@@ -278,7 +278,6 @@ extension TextStyle {
     return copy
   }
   
-  
   // MARK: - Letter spacing
   
   func withLetterSpacing(spacing: CGFloat) -> TextStyle {
