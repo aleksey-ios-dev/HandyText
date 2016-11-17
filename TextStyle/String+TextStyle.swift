@@ -10,16 +10,16 @@ import UIKit
 
 extension String {
   
-  func withStyle(style: TextStyle) -> NSAttributedString {
+  func withStyle(_ style: TextStyle) -> NSAttributedString {
     var string: String
     
     switch style.caseTrait {
     case .Capitalized:
-      string = self.capitalizedString
+      string = self.capitalized
     case .Lowercase:
-      string = self.lowercaseString
+      string = self.lowercased()
     case .Uppercase:
-      string = self.uppercaseString
+      string = self.uppercased()
     case .Normal:
       string = self
     }

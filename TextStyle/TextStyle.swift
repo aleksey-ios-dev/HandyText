@@ -16,7 +16,7 @@ class TextStyle {
   
   var textAttributes: [String: AnyObject] = {
     var attributes = [String: AnyObject]()
-    attributes[NSForegroundColorAttributeName] = UIColor.blackColor()
+    attributes[NSForegroundColorAttributeName] = UIColor.black
     
     return attributes
   }()
@@ -25,7 +25,7 @@ class TextStyle {
     didSet { refreshFont() }
   }
   
-  var size = UIFont.preferredFontForTextStyle(UIFontTextStyleBody).pointSize {
+  var size = UIFont.preferredFont(forTextStyle: .body).pointSize {
     didSet { refreshFont() }
   }
 
@@ -59,23 +59,23 @@ class TextStyle {
   var opacity: CGFloat = 1.0 {
     didSet {
       if let foregroundColor = textAttributes[NSForegroundColorAttributeName] as? UIColor {
-        textAttributes[NSForegroundColorAttributeName] = foregroundColor.colorWithAlphaComponent(opacity)
+        textAttributes[NSForegroundColorAttributeName] = foregroundColor.withAlphaComponent(opacity)
       }
       
       if let backgroundColor = textAttributes[NSBackgroundColorAttributeName] as? UIColor {
-        textAttributes[NSBackgroundColorAttributeName] = backgroundColor.colorWithAlphaComponent(opacity)
+        textAttributes[NSBackgroundColorAttributeName] = backgroundColor.withAlphaComponent(opacity)
       }
       
       if let underlineColor = textAttributes[NSUnderlineColorAttributeName] as? UIColor {
-        textAttributes[NSUnderlineColorAttributeName] = underlineColor.colorWithAlphaComponent(opacity)
+        textAttributes[NSUnderlineColorAttributeName] = underlineColor.withAlphaComponent(opacity)
       }
       
       if let strikeThroughColor = textAttributes[NSStrikethroughColorAttributeName] as? UIColor {
-        textAttributes[NSStrikethroughColorAttributeName] = strikeThroughColor.colorWithAlphaComponent(opacity)
+        textAttributes[NSStrikethroughColorAttributeName] = strikeThroughColor.withAlphaComponent(opacity)
       }
       
       if let strokeColor = textAttributes[NSStrokeColorAttributeName] as? UIColor {
-        textAttributes[NSStrokeColorAttributeName] = strokeColor.colorWithAlphaComponent(opacity)
+        textAttributes[NSStrokeColorAttributeName] = strokeColor.withAlphaComponent(opacity)
       }
     }
   }
@@ -108,25 +108,25 @@ class TextStyle {
     var literal: String {
       switch self {
       case .Title1:
-        return UIFontTextStyleTitle1
+        return UIFontTextStyle.title1.rawValue
       case .Title2:
-        return UIFontTextStyleTitle2
+        return UIFontTextStyle.title2.rawValue
       case .Title3:
-        return UIFontTextStyleTitle3
+        return UIFontTextStyle.title3.rawValue
       case .Headline:
-        return UIFontTextStyleHeadline
+        return UIFontTextStyle.headline.rawValue
       case .Subheadline:
-        return UIFontTextStyleSubheadline
+        return UIFontTextStyle.subheadline.rawValue
       case .Body:
-        return UIFontTextStyleBody
-      case Callout:
-        return UIFontTextStyleCallout
+        return UIFontTextStyle.body.rawValue
+      case .Callout:
+        return UIFontTextStyle.callout.rawValue
       case .Footnote:
-        return UIFontTextStyleFootnote
+        return UIFontTextStyle.footnote.rawValue
       case .Caption1:
-        return UIFontTextStyleCaption1
+        return UIFontTextStyle.caption1.rawValue
       case .Caption2:
-        return UIFontTextStyleCaption2
+        return UIFontTextStyle.caption2.rawValue
       }
     }
   }
