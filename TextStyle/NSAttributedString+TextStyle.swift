@@ -18,7 +18,8 @@ extension NSAttributedString {
   
   func applyStyle(_ style: TextStyle, toOccurencesOf substring: String) -> NSAttributedString {
     guard let range = rangeOf(substring) else { return self }
-    let head = attributedSubstring(from: NSMakeRange(0, range.location))
+
+    let head = attributedSubstring(from: NSRange.init(location: 0, length: range.location))
     let foundString = attributedSubstring(from: range)
     let rest = attributedSubstring(from: NSMakeRange(range.length + range.location, self.length - (range.length + range.location)))
     
