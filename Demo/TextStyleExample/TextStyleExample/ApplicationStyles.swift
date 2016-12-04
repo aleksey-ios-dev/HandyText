@@ -11,7 +11,7 @@ import UIKit
 extension TextStyle {
   
   static var plainText: TextStyle {
-    return TextStyle(font: .Georgia).withSize(20)
+    return TextStyle(font: .Avenir).withSize(20)
   }
   
   static var url: TextStyle {
@@ -19,7 +19,7 @@ extension TextStyle {
   }
   
   static var header: TextStyle {
-    return plainText.withSizeMultipliedBy(1.4).withForegroundColor(.orange).uppercase().bold()
+    return plainText.withSizeMultiplied(by: 1.4).withForegroundColor(.orange).uppercase().bold()
   }
   
   static var button: TextStyle {

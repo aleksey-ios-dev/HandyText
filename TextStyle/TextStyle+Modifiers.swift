@@ -39,13 +39,13 @@ extension TextStyle {
     return copy
   }
   
-  func withSizeIncrementedBy(_ increment: CGFloat) -> TextStyle {
+  func withSizeIncremented(by increment: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.size += increment
     return copy
   }
   
-  func withSizeMultipliedBy(_ multiplicator: CGFloat) -> TextStyle {
+  func withSizeMultiplied(by multiplicator: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.size *= multiplicator
     return copy
@@ -215,13 +215,13 @@ extension TextStyle {
   
   //MARK: - Offset
   
-  func withAbsoluteBaselineOffset(_ offset: CGFloat) -> TextStyle {
+  func withBaselineOffset(absolute offset: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSBaselineOffsetAttributeName] = offset as AnyObject?
     return copy
   }
   
-  func withRelativeBaselineOffset(_ ratio: CGFloat) -> TextStyle {
+  func withBaselineOffset(relative ratio: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSBaselineOffsetAttributeName] = (size * ratio) as AnyObject?
     return copy

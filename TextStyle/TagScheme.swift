@@ -19,8 +19,7 @@ class TagScheme {
   }
   
   func modifier(for tag: Tag) -> TextStyleModifier {
-    if let modifier = map[tag] { return modifier }
-    else { return { $0 } }
+    return map[tag] ?? { $0 }
   }
   
 }

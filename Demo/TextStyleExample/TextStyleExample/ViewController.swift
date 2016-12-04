@@ -25,7 +25,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    navigationController?.navigationBar.applyAttributesFrom(TextStyle.header.withForegroundColor(.black))
+    navigationController?.navigationBar.applyAttributes(from: TextStyle.header.withForegroundColor(.black))
     
     title = "Text style demo"
      
