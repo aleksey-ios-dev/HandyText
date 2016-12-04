@@ -1,6 +1,6 @@
 //
 //  NSAttributedString+TextStyle.swift
-//  TextStyle
+//  HandyText
 //
 //  Copyright © 2016 aleksey chernish. All rights reserved.
 //

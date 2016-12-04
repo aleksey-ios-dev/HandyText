@@ -1,9 +1,9 @@
-TextStyle
+HandyText
 --------------
 
 Purpose
 --------------
-TextStyle is a helper library that allows to create and manage text styles in clear declarative manner.
+HandyText is a helper library that allows to create and manage text styles in clear declarative manner.
 
 Problem solved
 --------------
@@ -21,7 +21,7 @@ Swift 2.2
 Installation
 --------------
 
-Copy contents of TextStyle directory to your project. Declare own text styles as static functions or properties of TextStyle struct.
+Copy contents of HandyText directory to your project. Declare own text styles as static functions or properties of TextStyle class.
 
 Version 1.0
 

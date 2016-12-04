@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 
-  s.name     = 'TextStyle'
+  s.name     = 'HandyText'
   s.version  = '1.1.0'
   s.ios.deployment_target = '9.0'
   s.license  = 'MIT'
-  s.summary  = 'TextStyle library helps you manage text dtyles in a declarative manner.'
+  s.summary  = 'HandyText library helps you manage text dtyles in a declarative manner.'
   s.description = 'A tool providing a flexible and self descriptive wrapper for creating and managing attributed strings.'
   s.homepage = 'https://github.com/mmrmmlrr/TextStyle'
   s.author = { 'aleksey' => 'achernish85@gmail.com' }

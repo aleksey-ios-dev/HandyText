@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TextStyleExample.xcodeproj">
+      location = "self:HandyTextExample.xcodeproj">
    </FileRef>
 </Workspace>
