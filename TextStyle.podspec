@@ -5,8 +5,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.license  = 'MIT'
   s.summary  = 'TextStyle library helps you manage text dtyles in a declarative manner.'
-  s.description = 'A tool for managing text styles in iOS projects.'
-  s.homepage = 'https://github.com/mmrmmlrr/T dextStyle'
+  s.description = 'A tool providing a flexible and self descriptive wrapper for creating and managing attributed strings.'
+  s.homepage = 'https://github.com/mmrmmlrr/TextStyle'
   s.author = { 'aleksey' => 'achernish85@gmail.com' }
   s.source   = { :git => 'https://github.com/mmrmmlrr/TextStyle.git', :tag => s.version.to_s }
   s.exclude_files = "Demo/"
