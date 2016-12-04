@@ -21,7 +21,13 @@ Swift 2.2
 Installation
 --------------
 
-Copy contents of HandyText directory to your project. Declare own text styles as static functions or properties of TextStyle class.
+```ruby
+# In your Podfile
+
+pod 'HandyText'
+```
+
+Declare own text styles as static functions or properties of TextStyle class.
 
 Version 1.0
 
