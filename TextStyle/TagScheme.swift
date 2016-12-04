@@ -1,9 +1,8 @@
 //
 //  TagScheme.swift
-//  TextStyleExample
+//  TextStyle
 //
-//  Created by Aleksey on 21.08.16.
-//  Copyright © 2016 Aleksey Chernish. All rights reserved.
+//  Copyright © 2016 aleksey chernish. All rights reserved.
 //
 
 import Foundation

@@ -1,8 +1,7 @@
 //
 //  NSAttributedString+TextStyle.swift
-//  Styles
+//  TextStyle
 //
-//  Created by aleksey on 24.06.16.
 //  Copyright © 2016 aleksey chernish. All rights reserved.
 //
 

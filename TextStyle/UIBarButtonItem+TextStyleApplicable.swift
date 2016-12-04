@@ -1,9 +1,8 @@
 //
 //  UIBarButtonItem+TextStyleApplicable.swift
-//  Reel
+//  TextStyle
 //
-//  Created by Aleksey on 22.11.16.
-//  Copyright © 2016 Yalantis. All rights reserved.
+//  Copyright © 2016 aleksey chernish. All rights reserved.
 //
 
 import UIKit

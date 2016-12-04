@@ -1,8 +1,7 @@
 //
 //  TextStyleApplicable.swift
-//  MVCDemo
+//  TextStyle
 //
-//  Created by aleksey on 26.06.16.
 //  Copyright © 2016 aleksey chernish. All rights reserved.
 //
 
