@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0084EA5D1D99FAE700D4FC3C /* String+TagScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0084EA5C1D99FAE700D4FC3C /* String+TagScheme.swift */; };
+		5B1917DB1DE4362700779977 /* UIBarButtonItem+TextStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1917DA1DE4362700779977 /* UIBarButtonItem+TextStyleApplicable.swift */; };
 		5B6394EC1D69943E00856180 /* TagScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6394EB1D69943E00856180 /* TagScheme.swift */; };
 		5BF554051D2A72520031DAB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF554041D2A72520031DAB9 /* AppDelegate.swift */; };
 		5BF554071D2A72520031DAB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF554061D2A72520031DAB9 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		0084EA5C1D99FAE700D4FC3C /* String+TagScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TagScheme.swift"; sourceTree = "<group>"; };
+		5B1917DA1DE4362700779977 /* UIBarButtonItem+TextStyleApplicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+TextStyleApplicable.swift"; sourceTree = "<group>"; };
 		5B6394EB1D69943E00856180 /* TagScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagScheme.swift; sourceTree = "<group>"; };
 		5BF554011D2A72520031DAB9 /* TextStyleExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextStyleExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF554041D2A72520031DAB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				5BF5541F1D2A74D10031DAB9 /* TextStyle.swift */,
 				5BF554201D2A74D10031DAB9 /* TextStyleApplicable.swift */,
 				5BF554211D2A74D10031DAB9 /* UINavigationBar+TextStyle.swift */,
+				5B1917DA1DE4362700779977 /* UIBarButtonItem+TextStyleApplicable.swift */,
 			);
 			name = TextStyle;
 			path = ../../TextStyle;
@@ -133,7 +136,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Aleksey Chernish";
 				TargetAttributes = {
 					5BF554001D2A72520031DAB9 = {
@@ -189,6 +192,7 @@
 				5BF554051D2A72520031DAB9 /* AppDelegate.swift in Sources */,
 				5BF554251D2A74D10031DAB9 /* TextStyle+Modifiers.swift in Sources */,
 				5BF5542A1D2A74F60031DAB9 /* ApplicationStyles.swift in Sources */,
+				5B1917DB1DE4362700779977 /* UIBarButtonItem+TextStyleApplicable.swift in Sources */,
 				5BF554241D2A74D10031DAB9 /* String+TextStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,8 +233,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -275,8 +281,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -295,6 +303,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -308,7 +317,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ale-------------------------ksey.chernish.TextStyleExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -320,7 +329,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ale-------------------------ksey.chernish.TextStyleExample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};

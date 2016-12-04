@@ -1,8 +1,7 @@
 //
 //  TextStyleApplicable.swift
-//  MVCDemo
+//  TextStyle
 //
-//  Created by aleksey on 26.06.16.
 //  Copyright © 2016 aleksey chernish. All rights reserved.
 //
 
@@ -12,7 +11,7 @@ protocol TextStyleApplicable {}
 
 extension TextStyleApplicable where Self: NSObject {
   
-  func applyAttributesFrom(style: TextStyle) {
+  func applyAttributes(from style: TextStyle) {
     let font = style.textAttributes[NSFontAttributeName] as? UIFont
     let color = style.textAttributes[NSForegroundColorAttributeName] as? UIColor
     setValue(font, forKey: "font")

@@ -1,21 +1,20 @@
 //
 //  TagScheme.swift
-//  TextStyleExample
+//  TextStyle
 //
-//  Created by Aleksey on 21.08.16.
-//  Copyright © 2016 Aleksey Chernish. All rights reserved.
+//  Copyright © 2016 aleksey chernish. All rights reserved.
 //
 
 import Foundation
 
-typealias TextStyleModifier = TextStyle -> TextStyle
+typealias TextStyleModifier = (TextStyle) -> TextStyle
 typealias Tag = String
 
 class TagScheme {
   
   private var map = [Tag: TextStyleModifier]()
   
-  func forTag(tag: Tag, use modifier: TextStyleModifier) {
+  func forTag(_ tag: Tag, use modifier: @escaping TextStyleModifier) {
     map[tag] = modifier
   }
   
