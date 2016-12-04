@@ -1,6 +1,6 @@
 //
 //  String+TextStyle.swift
-//  TextStyle
+//  HandyText
 //
 //  Copyright © 2016 aleksey chernish. All rights reserved.
 //
@@ -9,17 +9,17 @@ import UIKit
 
 extension String {
   
-  func withStyle(_ style: TextStyle) -> NSAttributedString {
+  public func withStyle(_ style: TextStyle) -> NSAttributedString {
     var string: String
     
     switch style.caseTrait {
-    case .Capitalized:
+    case .capitalized:
       string = self.capitalized
-    case .Lowercase:
+    case .lowercase:
       string = self.lowercased()
-    case .Uppercase:
+    case .uppercase:
       string = self.uppercased()
-    case .Normal:
+    case .normal:
       string = self
     }
     

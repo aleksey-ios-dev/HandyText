@@ -1,32 +1,32 @@
 //
 //  Font.swift
-//  TextStyle
+//  HandyText
 //
 //  Copyright © 2016 aleksey chernish. All rights reserved.
 //
 
-struct Font {
+public struct Font {
 
-  enum Thickness {
-    case Extralight, Light, Regular, Medium, Bold, Heavy, Extraheavy
+  public enum Thickness {
+    case extralight, light, regular, medium, bold, heavy, extraheavy
   }
 
-  let extralight: String
-  let extralightItalic: String
-  let light: String
-  let lightItalic: String
-  let regular: String
-  let italic: String
-  let medium: String
-  let mediumItalic: String
-  let bold: String
-  let boldItalic: String
-  let heavy: String
-  let heavyItalic: String
-  let extraheavy: String
-  let extraheavyItalic: String
+  public let extralight: String
+  public let extralightItalic: String
+  public let light: String
+  public let lightItalic: String
+  public let regular: String
+  public let italic: String
+  public let medium: String
+  public let mediumItalic: String
+  public let bold: String
+  public let boldItalic: String
+  public let heavy: String
+  public let heavyItalic: String
+  public let extraheavy: String
+  public let extraheavyItalic: String
 		
-  init(
+  public init(
     extralight: String = "",
     extralightItalic: String = "",
     light: String = "",
