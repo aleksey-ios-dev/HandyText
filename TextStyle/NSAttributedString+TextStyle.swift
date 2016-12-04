@@ -7,15 +7,16 @@
 
 import UIKit
 
-func +(left: NSAttributedString, right: NSAttributedString) -> NSAttributedString {
+public func +(left: NSAttributedString, right: NSAttributedString) -> NSAttributedString {
   let result = NSMutableAttributedString(attributedString: left)
   result.append(right)
+  
   return result.copy() as! NSAttributedString
 }
 
 extension NSAttributedString {
   
-  func applyStyle(_ style: TextStyle, toOccurencesOf substring: String) -> NSAttributedString {
+  public func applyStyle(_ style: TextStyle, toOccurencesOf substring: String) -> NSAttributedString {
     guard let range = rangeOf(substring) else { return self }
 
     let head = attributedSubstring(from: NSRange.init(location: 0, length: range.location))
@@ -25,7 +26,7 @@ extension NSAttributedString {
     return head + foundString.string.withStyle(style) + rest.applyStyle(style, toOccurencesOf: substring)
   }
   
-  func applyStyle(_ style: TextStyle, in range: NSRange?) -> NSAttributedString {
+  public func applyStyle(_ style: TextStyle, in range: NSRange?) -> NSAttributedString {
     guard let range = range else { return self }
     let head = attributedSubstring(from: NSMakeRange(0, range.location))
     let substringInRange = attributedSubstring(from: range)

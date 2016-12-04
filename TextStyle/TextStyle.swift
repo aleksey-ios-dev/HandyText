@@ -7,40 +7,40 @@
 
 import UIKit
 
-class TextStyle {
+public class TextStyle {
   
-	enum CaseTrait {
-		case Normal, Capitalized, Lowercase, Uppercase
+	public enum CaseTrait {
+		case normal, capitalized, lowercase, uppercase
 	}
   
-  var textAttributes: [String: AnyObject] = {
+  public var textAttributes: [String: AnyObject] = {
     var attributes = [String: AnyObject]()
     attributes[NSForegroundColorAttributeName] = UIColor.black
     
     return attributes
   }()
 	
-  var font: Font {
+  public var font: Font {
     didSet { refreshFont() }
   }
   
-  var size = UIFont.preferredFont(forTextStyle: .body).pointSize {
+  public var size = UIFont.preferredFont(forTextStyle: .body).pointSize {
     didSet { refreshFont() }
   }
 
-  var thickness = Font.Thickness.Regular {
+  public var thickness = Font.Thickness.regular {
     didSet { refreshFont() }
   }
   
-  var caseTrait: CaseTrait = .Normal {
+  public var caseTrait: CaseTrait = .normal {
     didSet { refreshFont() }
   }
 
-  var isItalic = false {
+  public var isItalic = false {
     didSet { refreshFont() }
   }
   
-  var paragraphStyle: NSMutableParagraphStyle {
+  public var paragraphStyle: NSMutableParagraphStyle {
     get {
       if let style = textAttributes[NSParagraphStyleAttributeName] as? NSMutableParagraphStyle{
         return style
@@ -55,7 +55,7 @@ class TextStyle {
     }
   }
   
-  var opacity: CGFloat = 1.0 {
+  public var opacity: CGFloat = 1.0 {
     didSet {
       if let foregroundColor = textAttributes[NSForegroundColorAttributeName] as? UIColor {
         textAttributes[NSForegroundColorAttributeName] = foregroundColor.withAlphaComponent(opacity)
@@ -79,28 +79,28 @@ class TextStyle {
     }
   }
 	
-	var typeface: String {
+	public var typeface: String {
 		get {
 			switch thickness {
-			case .Extralight:
+			case .extralight:
 				return isItalic ? font.extralightItalic : font.extralight
-			case .Light:
+			case .light:
 				return isItalic ? font.lightItalic : font.light
-			case .Regular:
+			case .regular:
 				return isItalic ? font.italic : font.regular
-      case .Medium:
+      case .medium:
         return isItalic ? font.mediumItalic : font.medium
-			case .Bold:
+			case .bold:
 				return isItalic ? font.boldItalic : font.bold
-			case .Heavy:
+			case .heavy:
 				return isItalic ? font.heavyItalic : font.heavy
-			case .Extraheavy:
+			case .extraheavy:
 				return isItalic ? font.extraheavyItalic : font.extraheavy
 			}
 		}
 	}
 	
-  enum DynamicFontStyle {
+  public enum DynamicFontStyle {
     
     case Title1, Title2, Title3, Headline, Subheadline, Body, Callout, Footnote, Caption1, Caption2
     
@@ -130,7 +130,7 @@ class TextStyle {
     }
   }
   
-	init(font: Font) {
+	public init(font: Font) {
 		self.font = font
     refreshFont()
 	}
@@ -139,7 +139,7 @@ class TextStyle {
     textAttributes[NSFontAttributeName] = UIFont.init(name: typeface, size: size)
   }
   
-  func copy() -> TextStyle {
+  public func copy() -> TextStyle {
     let copy = TextStyle(font: font)
     copy.textAttributes = textAttributes
     copy.size = size

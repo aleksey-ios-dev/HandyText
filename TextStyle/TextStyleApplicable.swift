@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol TextStyleApplicable {}
+public protocol TextStyleApplicable {}
 
-extension TextStyleApplicable where Self: NSObject {
+public extension TextStyleApplicable where Self: NSObject {
   
-  func applyAttributes(from style: TextStyle) {
+  public func applyAttributes(from style: TextStyle) {
     let font = style.textAttributes[NSFontAttributeName] as? UIFont
     let color = style.textAttributes[NSForegroundColorAttributeName] as? UIColor
     setValue(font, forKey: "font")

@@ -9,7 +9,7 @@ import UIKit
 
 extension UINavigationBar: TextStyleApplicable {
   
-  func applyAttributes(from style: TextStyle) {
+  public func applyAttributes(from style: TextStyle) {
     titleTextAttributes = style.textAttributes
   }
   

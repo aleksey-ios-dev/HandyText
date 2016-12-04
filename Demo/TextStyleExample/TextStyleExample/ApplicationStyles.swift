@@ -11,7 +11,7 @@ import UIKit
 extension TextStyle {
   
   static var plainText: TextStyle {
-    return TextStyle(font: .Avenir).withSize(20)
+    return TextStyle(font: .avenir).withSize(20)
   }
   
   static var url: TextStyle {

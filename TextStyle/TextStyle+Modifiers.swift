@@ -11,20 +11,20 @@ extension TextStyle {
   
   //MARK: - Based on
   
-  class func based(on style: TextStyle) -> TextStyle {
+  public class func based(on style: TextStyle) -> TextStyle {
     return style.copy()
   }
   
   //MARK: - Fill color
   
-  func withForegroundColor(_ color: UIColor) -> TextStyle {
+  public func withForegroundColor(_ color: UIColor) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSForegroundColorAttributeName] = color
     copy.refreshOpacity()
     return copy
   }
   
-  func withBackgroundColor(_ color: UIColor) -> TextStyle {
+  public func withBackgroundColor(_ color: UIColor) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSBackgroundColorAttributeName] = color
     copy.refreshOpacity()
@@ -33,25 +33,25 @@ extension TextStyle {
   
   //MARK: - Size
   
-  func withSize(_ size: CGFloat) -> TextStyle {
+  public func withSize(_ size: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.size = size
     return copy
   }
   
-  func withSizeIncremented(by increment: CGFloat) -> TextStyle {
+  public func withSizeIncremented(by increment: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.size += increment
     return copy
   }
   
-  func withSizeMultiplied(by multiplicator: CGFloat) -> TextStyle {
+  public func withSizeMultiplied(by multiplicator: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.size *= multiplicator
     return copy
   }
   
-  func withDynamicFontStyle(_ style: DynamicFontStyle) -> TextStyle {
+  public func withDynamicFontStyle(_ style: DynamicFontStyle) -> TextStyle {
     let copy = self.copy()
     copy.size = UIFont.preferredFont(forTextStyle: UIFontTextStyle(rawValue: style.literal)).pointSize
   
@@ -60,57 +60,57 @@ extension TextStyle {
   
   //MARK: - Thickness
 
-  func extralight() -> TextStyle {
+  public func extralight() -> TextStyle {
     let copy = self.copy()
-    copy.thickness = .Extralight
+    copy.thickness = .extralight
     return copy
   }
   
-  func light() -> TextStyle {
+  public func light() -> TextStyle {
     let copy = self.copy()
-    copy.thickness = .Light
+    copy.thickness = .light
     return copy
   }
   
-  func regular() -> TextStyle {
+  public func regular() -> TextStyle {
     let copy = self.copy()
-    copy.thickness = .Regular
+    copy.thickness = .regular
     return copy
   }
   
-  func medium() -> TextStyle {
+  public func medium() -> TextStyle {
     let copy = self.copy()
-    copy.thickness = .Medium
+    copy.thickness = .medium
     return copy
   }
   
-  func bold() -> TextStyle {
+  public func bold() -> TextStyle {
     let copy = self.copy()
-    copy.thickness = .Bold
+    copy.thickness = .bold
     return copy
   }
   
-  func heavy() -> TextStyle {
+  public func heavy() -> TextStyle {
     let copy = self.copy()
-    copy.thickness = .Heavy
+    copy.thickness = .heavy
     return copy
   }
   
-  func extraheavy() -> TextStyle {
+  public func extraheavy() -> TextStyle {
     let copy = self.copy()
-    copy.thickness = .Extraheavy
+    copy.thickness = .extraheavy
     return copy
   }
   
   //MARK: - Slant
   
-  func italic() -> TextStyle {
+  public func italic() -> TextStyle {
     let copy = self.copy()
     copy.isItalic = true
     return copy
   }
   
-  func straight() -> TextStyle {
+  public func straight() -> TextStyle {
     let copy = self.copy()
     copy.isItalic = false
     return copy
@@ -118,39 +118,39 @@ extension TextStyle {
   
   //MARK: - Case Trait, mutually exclusive
   
-  func capitalized() -> TextStyle {
+  public func capitalized() -> TextStyle {
     let copy = self.copy()
-    copy.caseTrait = .Capitalized
+    copy.caseTrait = .capitalized
     return copy
   }
   
-  func lowercase() -> TextStyle {
+  public func lowercase() -> TextStyle {
     let copy = self.copy()
-    copy.caseTrait = .Lowercase
+    copy.caseTrait = .lowercase
     return copy
   }
   
-  func uppercase() -> TextStyle {
+  public func uppercase() -> TextStyle {
     let copy = self.copy()
-    copy.caseTrait = .Uppercase
+    copy.caseTrait = .uppercase
     return copy
   }
   
-  func normalCase() -> TextStyle {
+  public func normalCase() -> TextStyle {
     let copy = self.copy()
-    copy.caseTrait = .Normal
+    copy.caseTrait = .normal
     return copy
   }
   
   //MARK: - Underline
   
-  func withUnderline(_ style: NSUnderlineStyle) -> TextStyle {
+  public func withUnderline(_ style: NSUnderlineStyle) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSUnderlineStyleAttributeName] = style.rawValue as AnyObject?
     return copy
   }
   
-  func withUnderlineColor(_ color: UIColor?) -> TextStyle {
+  public func withUnderlineColor(_ color: UIColor?) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSUnderlineColorAttributeName] = color
     refreshOpacity()
@@ -159,13 +159,13 @@ extension TextStyle {
   
   //MARK: - Strikethrough
   
-  func withStrikethrough(_ strikethrough: Bool) -> TextStyle {
+  public func withStrikethrough(_ strikethrough: Bool) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSStrikethroughStyleAttributeName] = strikethrough as AnyObject?
     return copy
   }
   
-  func withStrikethroughColor(_ color: UIColor?) -> TextStyle {
+  public func withStrikethroughColor(_ color: UIColor?) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSStrikethroughColorAttributeName] = color
     return copy
@@ -173,13 +173,13 @@ extension TextStyle {
   
   //MARK: - Stroke
   
-  func withStrokeWidth(_ width: CGFloat) -> TextStyle {
+  public func withStrokeWidth(_ width: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSStrokeWidthAttributeName] = width as AnyObject?
     return copy
   }
 
-  func withStrokeColor(_ color: UIColor?) -> TextStyle {
+  public func withStrokeColor(_ color: UIColor?) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSStrokeColorAttributeName] = color
     return copy
@@ -187,7 +187,7 @@ extension TextStyle {
   
   //MARK: - Shadow
   
-  func withShadow(_ shadow: NSShadow?) -> TextStyle {
+  public func withShadow(_ shadow: NSShadow?) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSShadowAttributeName] = shadow
     return copy
@@ -195,7 +195,7 @@ extension TextStyle {
   
   // MARK: - Opacity
   
-  func withOpacity(_ opacity: CGFloat) -> TextStyle {
+  public func withOpacity(_ opacity: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.opacity = opacity
     return copy
@@ -203,7 +203,7 @@ extension TextStyle {
   
   //MARK: - Link 
   
-  func withLink(_ link: String?) -> TextStyle {
+  public func withLink(_ link: String?) -> TextStyle {
     let copy = self.copy()
     if let link = link {
       copy.textAttributes[NSLinkAttributeName] = NSURL(string: link)
@@ -215,7 +215,7 @@ extension TextStyle {
   
   //MARK: - Offset
   
-  func withBaselineOffset(absolute offset: CGFloat) -> TextStyle {
+  public func withBaselineOffset(absolute offset: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSBaselineOffsetAttributeName] = offset as AnyObject?
     return copy
@@ -229,50 +229,50 @@ extension TextStyle {
   
   //MARK: - Paragraph style options
   
-  func withParagraphStyle(_ style: NSParagraphStyle) -> TextStyle {
+  public func withParagraphStyle(_ style: NSParagraphStyle) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle = style.mutableCopy() as! NSMutableParagraphStyle
   
     return copy
   }
   
-  func withLineBreakMode(_ mode: NSLineBreakMode) -> TextStyle {
+  public func withLineBreakMode(_ mode: NSLineBreakMode) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle.lineBreakMode = mode
     return copy
   }
   
-  func withHeadIndent(_ indent: CGFloat) -> TextStyle {
+  public func withHeadIndent(_ indent: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle.headIndent = indent
     return copy
   }
   
-  func withFirstLineIndent(_ indent: CGFloat) -> TextStyle {
+  public func withFirstLineIndent(_ indent: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle.firstLineHeadIndent = indent
     return copy
   }
   
-  func withParagraphSpacing(_ spacing: CGFloat) -> TextStyle {
+  public func withParagraphSpacing(_ spacing: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle.paragraphSpacing = spacing
     return copy
   }
 
-  func withParagraphSpacingBefore(_ spacing: CGFloat) -> TextStyle {
+  public func withParagraphSpacingBefore(_ spacing: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle.paragraphSpacingBefore = spacing
     return copy
   }
 
-  func withAlignment(_ alignment: NSTextAlignment) -> TextStyle {
+  public func withAlignment(_ alignment: NSTextAlignment) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle.alignment = alignment
     return copy
   }
   
-  func withLineSpacing(_ spacing: CGFloat) -> TextStyle {
+  public func withLineSpacing(_ spacing: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle.lineSpacing = spacing
     return copy
@@ -280,7 +280,7 @@ extension TextStyle {
   
   // MARK: - Letter spacing
   
-  func withLetterSpacing(_ spacing: CGFloat) -> TextStyle {
+  public func withLetterSpacing(_ spacing: CGFloat) -> TextStyle {
     let copy = self.copy()
     copy.textAttributes[NSKernAttributeName] = spacing as AnyObject?
     return copy
