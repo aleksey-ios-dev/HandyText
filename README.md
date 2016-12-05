@@ -101,7 +101,12 @@ let result = "about <i>zebras</i>".withStyle(.plainText, tagScheme: scheme)
 FAQ
 --------------
 ### How many styles do I need?
-As little as possible. Average application has 2-3 basic and several complementary text styles.
+As little as possible. Average application has 2-3 basic and several complementary text styles. It's not necessary to create a new style if it differs with only the color or alignment. Better to extend the style at place. 
+
+### Absolute or relative size?
+You are used to define text size in points: 10 for plain text, 15 for heading and so on. But let's look from another angle: what this numbers mean? I guess, the designer could think something like 'let headers be a half times more than normal text'. Due to method ```swift withSizeMultiplied(by:)``` you can define text sizes proportionally. In this case, when the base style changes its size, the whole text scheme scales proportionally. Baseline offset can also be defined relative, which will keep proportions in custom superscripts like below:
+
+ <img src="img/05.png" width="250">
 
 
 
