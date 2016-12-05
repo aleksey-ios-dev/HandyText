@@ -54,54 +54,55 @@ The Font is only required parameter for creating a brand new style, all other pa
   }
 ```
 
-In text there also will be clickable links. Links will have same font and size as plain text, but italic, blue and underlined:
-
-```swift
-  static func url(link: String) -> TextStyle {
-    return plainText.withForegroundColor(.blue).italic().withUnderline(.StyleSingle).withLink(link)
-  }
-```
-
-It's remarkable that styles are chained, in other words based on each other. Changing basic style font to .Georgia makes all style scheme look different, but still well aligned.
+It's remarkable that styles are chained, in other words based on each other. Changing basic style font to .georgia makes all style scheme look different, but still well fitted.
 
 Attributed strings
 ----------------
 
 The costs of using text styles is switching to attributed text, which is supported by the most of UIKit classes.
-
 ```swift
-self.testLabel.attributedText = "Hello World".withStyle(.plainText)
+label.attributedText = "Hello, World!".withStyle(.plainText)
 ```
+ <img src="img/01.png" width="200">
 
-Tag parser
-----------------
+### Merging attributed strings
+Attributed string can be combined to achieve more complex appearance:
+```swift
+let title = "First name: ".withStyle(.placeholder)
+let name = "Michael".withStyle(.plainText)
+label.attributedText = title + name
+ ```
+ <img src="img/02.png" width="300">
+
+### Highlighting words
+You can highlight specific substrings with a different text style:
+```swift
+let text = "There are three species of zebras: the plains zebra, the Grévy's zebra and the mountain zebra"
+label.attributedText = text.withStyle(.plainText).applyStyle(.header1, toOccurencesOf: "zebra")
+```
+ <img src="img/03.png" width="400">
+
 
 For displaying strings with tags you define a tag scheme:
-
 ```swift
     let scheme = TagScheme()
     scheme.forTag("b") { $0.bold() }
     scheme.forTag("i") { $0.italic() }
 ```
 In the scheme for each custom tag you register a block defining the modification of the initial text style.
-
+Nested tags are supported. Text marked as following ```"<i><b>lions</b></i>"``` will be bold italic.
 To convert a string into an attributed string:
-
 ```swift
 let result = "about <i>zebras</i>".withStyle(.plainText, tagScheme: scheme)
 ```
+ <img src="img/04.png" width="250">
 
-Nested tags are supported. Text marked as following ```"<i><b>lions</b></i>"``` will be bold italic.
 
+FAQ
+--------------
+### How many styles do I need?
+As little as possible. Average application has 2-3 basic and several complementary text styles.
 
-Highlighting words
-----------------
-
-You can highlight specific substrings with a different text style:
-
-```swift
-let highlightedString = "African equids".withStyle(.plainText).applyStyle(.header, toOccurencesOf: "African")
-```
 
 
 License
