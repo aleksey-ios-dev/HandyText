@@ -15,8 +15,8 @@ The alternative way is in avoiding the use of IB for defining text appearance, b
 Supported OS & SDK Versions
 -----------------------------
 
-Swift 2.2
-* Supported build target - iOS 9.0 (Xcode 7)
+Swift 3.0
+* Supported build target - iOS 9.0 (Xcode 8)
 
 Installation
 --------------
@@ -66,7 +66,7 @@ label.attributedText = "Hello, World!".withStyle(.plainText)
  <img src="img/01.png" width="200">
 
 ### Merging attributed strings
-Attributed string can be combined to achieve more complex appearance:
+Attributed strings can be combined to achieve more complex appearance:
 ```swift
 let title = "First name: ".withStyle(.placeholder)
 let name = "Michael".withStyle(.plainText)
@@ -114,7 +114,7 @@ Here are some ideas. By using Dynamic Text Size in the base style, you will make
 <img src="img/06.jpg" width="600">
 
 ### Too many outlets!
-To use HandyText effectively you must create an outlet for every text containing view. Is it that bad? In well-designed projects all strings are kept in a single file: Localizable.strings. Not in storyboards, not in the code. With this approach the whole app can be translated into a new language without changing a line of code. HandyText libs encourages you to use this approach: fetch a localized string, apply a style, display the result in the corresponding outlet.
+To use HandyText effectively you must create an outlet for every text containing view. Is it that bad? In well-designed projects all strings are kept in the single file: Localizable.strings. Not in storyboards, not in the code. With this approach the whole app can be translated into a new language without changing a line of code. HandyText lib encourages you to use this approach: fetch a localized string, apply a style, display the result in the corresponding outlet.
 
 ### How to add links to my attributed text?
 The library doesn't add any new abilities to UIKit classes. For assigning a link to a chunk of text it uses NSLinkAttributeName. For more info refer to the [official docs](https://developer.apple.com/reference/uikit/uitextviewdelegate/1649337-textview).
@@ -123,7 +123,7 @@ The library doesn't add any new abilities to UIKit classes. For assigning a link
 Avoid giving names based on specific usage, try to keep it more generic. For instance, 'screenHeading' is a good name, 'orangeHeaderInFriendsList' – is not.
 
 ### Can HandyText help me improve my design specs?
-Of course. As a developer, together with design team you can define a table of common text styles and rules for describing modifiers. Instead of "HelveticaNeue-Bold, 15 pt, color: FF0000" it can be "style: header, color: tomatoRed"
+Of course. As a developer, together with design team you can define a table of common text styles and rules for describing modifiers. Instead of "HelveticaNeue-Bold, 15 pt, color: FF0000" it can be "style: header, color: tomatoRed".
 
 
 License
