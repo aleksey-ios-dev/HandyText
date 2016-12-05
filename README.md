@@ -60,7 +60,6 @@ Attributed strings
 ----------------
 
 The costs of using text styles is switching to attributed text, which is supported by the most of UIKit classes.
-
 ```swift
 label.attributedText = "Hello, World!".withStyle(.plainText)
 ```
@@ -68,7 +67,6 @@ label.attributedText = "Hello, World!".withStyle(.plainText)
 
 
 Attributed string can be combined to achieve more complex appearance:
-
 ```swift
 let title = "First name: ".withStyle(.placeholder)
 let name = "Michael".withStyle(.plainText)
@@ -78,12 +76,12 @@ label.attributedText = title + name
 
 
 You can highlight specific substrings with a different text style:
-
 ```swift
-let aboutZebras = "There are three species of zebras: the plains zebra, the Grévy's zebra and the mountain zebra"
-label.attributedText = aboutZebras.withStyle(.plainText).applyStyle(.header1, toOccurencesOf: "zebra")
+let text = "There are three species of zebras: the plains zebra, the Grévy's zebra and the mountain zebra"
+label.attributedText = text.withStyle(.plainText).applyStyle(.header1, toOccurencesOf: "zebra")
 ```
  <img src="img/03.png" width="400">
+
 
 Tag parser
 ----------------
