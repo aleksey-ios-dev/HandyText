@@ -75,7 +75,7 @@ let name = "Michael".withStyle(.plainText)
 label.attributedText = title + name
  ```
  
- ![Simple example](img/02.png =100?raw=true)
+ ![Simple example](img/02.png =100x?raw=true)
 
 
 
