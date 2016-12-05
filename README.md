@@ -3,7 +3,7 @@ HandyText
 
 Purpose
 --------------
-HandyText is a helper library that allows to create and manage text styles in clear declarative manner.
+HandyText is a helper library that allows to create and manage text styles in a clear declarative manner.
 
 Problem solved
 --------------
