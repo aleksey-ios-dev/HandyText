@@ -66,7 +66,7 @@ label.attributedText = "Hello, World!".withStyle(.plainText)
  <img src="img/01.png" width="200">
 
 ### Merging attributed strings
-Attributed string can be combined to achieve more complex appearance:
+Attributed strings can be combined to achieve more complex appearance:
 ```swift
 let title = "First name: ".withStyle(.placeholder)
 let name = "Michael".withStyle(.plainText)
