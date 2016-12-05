@@ -64,7 +64,8 @@ The costs of using text styles is switching to attributed text, which is support
 ```swift
 label.attributedText = "Hello, World!".withStyle(.plainText)
 ```
-![Simple example](img/01.png?raw=true)
+ <img src="img/01.png" width="100">
+
 
 
 Attributed string can be combined to achieve more complex appearance:
@@ -74,7 +75,7 @@ let title = "First name: ".withStyle(.placeholder)
 let name = "Michael".withStyle(.plainText)
 label.attributedText = title + name
  ```
- <img src="img/02.png" width="48">
+ <img src="img/02.png" width="300">
 
 
 
