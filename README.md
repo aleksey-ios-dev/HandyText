@@ -95,7 +95,7 @@ To convert a string into an attributed string:
 ```swift
 let result = "about <i>zebras</i>".withStyle(.plainText, tagScheme: scheme)
 ```
- <img src="img/04.png" width="400">
+ <img src="img/04.png" width="250">
 
 
 
