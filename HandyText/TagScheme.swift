@@ -13,6 +13,8 @@ public class TagScheme {
   
   private var map = [String: TextStyleModifier]()
   
+  public init() {}
+  
   public func forTag(_ tag: String, use modifier: @escaping TextStyleModifier) {
     map[tag] = modifier
   }
