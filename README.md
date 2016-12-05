@@ -65,7 +65,7 @@ The costs of using text styles is switching to attributed text, which is support
 self.testLabel.attributedText = "Hello, World!".withStyle(.plainText)
 ```
 
-[[https://github.com/mmrmmlrr/HandyText/blob/task/readme/img/01.png|alt=helloworld]]
+[[https://github.com/mmrmmlrr/HandyText/blob/master/img/01.png|alt=helloworld]]
 
 Tag parser
 ----------------
