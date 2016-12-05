@@ -29,7 +29,7 @@ pod 'HandyText'
 
 Declare own text styles as static functions or properties of TextStyle class.
 
-Version 1.0
+Version 1.2.0
 
 - Release version.
 
@@ -41,16 +41,16 @@ First, let's define some text styles:
 ```swift
 extension TextStyle {
   static var plainText: TextStyle {
-    return TextStyle(font: .Avenir)
+    return TextStyle(font: .avenir)
   }
 }
 ```
 
-The Font is only required parameter for creating a brand new style, all other params are set do defaults. Instead of copying instances and modifying properties the library proposes more declarative 'cascade' style. Think you need a style for headers based on plain text:
+The Font is only required parameter for creating a brand new style, all other params are set to defaults. Instead of copying instances and modifying properties the library proposes more declarative 'cascade' style. Think you need a style for headers based on plain text:
 
 ```swift
   static var header1: TextStyle {
-    return plainText.withSizeMultipliedBy(1.4).uppercase().bold()
+    return plainText.withSizeMultiplied(by: 1.4).uppercase().bold()
   }
 ```
 
@@ -58,7 +58,7 @@ In text there also will be clickable links. Links will have same font and size a
 
 ```swift
   static func url(link: String) -> TextStyle {
-    return plainText.withForegroundColor(.blueColor()).italic().withUnderline(.StyleSingle).withLink(link)
+    return plainText.withForegroundColor(.blue).italic().withUnderline(.StyleSingle).withLink(link)
   }
 ```
 
