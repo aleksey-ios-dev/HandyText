@@ -15,7 +15,7 @@ The alternative way is in avoiding the use of IB for defining text appearance, b
 Supported OS & SDK Versions
 -----------------------------
 
-Swift 2.2
+Swift 3.0
 * Supported build target - iOS 9.0 (Xcode 7)
 
 Installation
