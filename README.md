@@ -67,7 +67,6 @@ label.attributedText = "Hello, World!".withStyle(.plainText)
  <img src="img/01.png" width="100">
 
 
-
 Attributed string can be combined to achieve more complex appearance:
 
 ```swift
@@ -78,7 +77,13 @@ label.attributedText = title + name
  <img src="img/02.png" width="300">
 
 
+You can highlight specific substrings with a different text style:
 
+```swift
+let aboutZebras = "There are three species of zebras: the plains zebra, the Grévy's zebra and the mountain zebra"
+label.attributedText = aboutZebras.withStyle(.plainText).applyStyle(.header1, toOccurencesOf: "zebra")
+```
+ <img src="img/03.png" width="300">
 
 Tag parser
 ----------------
@@ -99,16 +104,6 @@ let result = "about <i>zebras</i>".withStyle(.plainText, tagScheme: scheme)
 ```
 
 Nested tags are supported. Text marked as following ```"<i><b>lions</b></i>"``` will be bold italic.
-
-
-Highlighting words
-----------------
-
-You can highlight specific substrings with a different text style:
-
-```swift
-let highlightedString = "African equids".withStyle(.plainText).applyStyle(.header, toOccurencesOf: "African")
-```
 
 
 License
