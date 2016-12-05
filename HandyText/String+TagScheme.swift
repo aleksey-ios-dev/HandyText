@@ -9,7 +9,7 @@ import Foundation
 
 extension String {
   
-  func withStyle(_ style: TextStyle, tagScheme: TagScheme) -> NSAttributedString {
+   public func withStyle(_ style: TextStyle, tagScheme: TagScheme) -> NSAttributedString {
     let result = NSMutableAttributedString()
     
     for (tag, substring) in decompose() {
@@ -23,7 +23,7 @@ extension String {
     return result
   }
   
-  private func decompose() -> [(tag: Tag?, text: String?)] {
+  private func decompose() -> [(tag: String?, text: String?)] {
     if characters.isEmpty { return [] }
     
     let components = self.components(separatedBy: "<")
@@ -35,7 +35,7 @@ extension String {
       let body = self.components(separatedBy: "<\(tag)>")[1].components(separatedBy: "</\(tag)>").first
       let tail = substring(from: range(of: "</\(tag)>")!.upperBound)
       
-      var result = [(tag: Tag?, text: String?)]()
+      var result = [(tag: String?, text: String?)]()
       result.append((nil, head))
       result.append((tag, body))
       result += tail.decompose()

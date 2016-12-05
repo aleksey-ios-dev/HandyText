@@ -7,18 +7,17 @@
 
 import Foundation
 
-typealias Tag = String
 public typealias TextStyleModifier = (TextStyle) -> TextStyle
 
 public class TagScheme {
   
-  private var map = [Tag: TextStyleModifier]()
+  private var map = [String: TextStyleModifier]()
   
   public func forTag(_ tag: String, use modifier: @escaping TextStyleModifier) {
     map[tag] = modifier
   }
   
-  func modifier(for tag: Tag) -> TextStyleModifier {
+  func modifier(for tag: String) -> TextStyleModifier {
     return map[tag] ?? { $0 }
   }
   
