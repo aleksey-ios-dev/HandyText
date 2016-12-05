@@ -109,7 +109,7 @@ You are used to define text size in points: 10 for plain text, 15 for heading an
 
 ### What can make the text size change?
 Here are some ideas. By using Dynamic Text Size in the base style, you will make your app sensitive to the Accessibility preferences of the device. For large devices it's reasonable to use slightly larger fonts. Some apps allow users to change appearance themes. With HandyText updating fonts becomes a simple task.
- <img src="img/06.png" width="450">
+ <img src="img/06.jpg" width="450">
 
 
 
