@@ -62,9 +62,22 @@ Attributed strings
 The costs of using text styles is switching to attributed text, which is supported by the most of UIKit classes.
 
 ```swift
-self.testLabel.attributedText = "Hello, World!".withStyle(.plainText)
+label.attributedText = "Hello, World!".withStyle(.plainText)
 ```
-![Alt text](img/01.png?raw=true "Hello!!!")
+![Simple example](img/01.png?raw=true)
+
+
+Attributed string can be combined to achieve more complex appearance:
+
+```swift
+let title = "First name: ".withStyle(.placeholder)
+let name = "Michael".withStyle(.plainText)
+ ```
+ 
+ ![Simple example](img/02.png?raw=true)
+
+
+
 
 Tag parser
 ----------------
