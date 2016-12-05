@@ -72,9 +72,10 @@ Attributed string can be combined to achieve more complex appearance:
 ```swift
 let title = "First name: ".withStyle(.placeholder)
 let name = "Michael".withStyle(.plainText)
+label.attributedText = title + name
  ```
  
- ![Simple example](img/02.png?raw=true)
+ ![Simple example](img/02.png =100?raw=true)
 
 
 
