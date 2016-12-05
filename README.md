@@ -65,7 +65,7 @@ label.attributedText = "Hello, World!".withStyle(.plainText)
 ```
  <img src="img/01.png" width="200">
 
-##### Merging attributed strings
+### Merging attributed strings
 Attributed string can be combined to achieve more complex appearance:
 ```swift
 let title = "First name: ".withStyle(.placeholder)
@@ -74,7 +74,7 @@ label.attributedText = title + name
  ```
  <img src="img/02.png" width="300">
 
-##### Highlighting words
+### Highlighting words
 You can highlight specific substrings with a different text style:
 ```swift
 let text = "There are three species of zebras: the plains zebra, the Grévy's zebra and the mountain zebra"
@@ -100,7 +100,8 @@ let result = "about <i>zebras</i>".withStyle(.plainText, tagScheme: scheme)
 
 FAQ
 --------------
-
+### How many styles do I need?
+As little as possible. Average application has 2-3 basic and several complementary text styles.
 
 
 
