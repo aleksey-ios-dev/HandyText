@@ -22,8 +22,8 @@
 		5B31FB001DF45D5200EC9D42 /* TextStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF61DF45D5200EC9D42 /* TextStyleApplicable.swift */; };
 		5B31FB011DF45D5200EC9D42 /* UIBarButtonItem+TextStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF71DF45D5200EC9D42 /* UIBarButtonItem+TextStyleApplicable.swift */; };
 		5B31FB021DF45D5200EC9D42 /* UINavigationBar+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF81DF45D5200EC9D42 /* UINavigationBar+TextStyle.swift */; };
-		5B31FB051DF45D7700EC9D42 /* ApplicationFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FB031DF45D7700EC9D42 /* ApplicationFonts.swift */; };
-		5B31FB061DF45D7700EC9D42 /* ApplicationStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FB041DF45D7700EC9D42 /* ApplicationStyles.swift */; };
+		5BC2FEF51DF50C3900463413 /* ApplicationFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2FEF31DF50C3900463413 /* ApplicationFonts.swift */; };
+		5BC2FEF61DF50C3900463413 /* ApplicationStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2FEF41DF50C3900463413 /* ApplicationStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +44,8 @@
 		5B31FAF61DF45D5200EC9D42 /* TextStyleApplicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyleApplicable.swift; sourceTree = "<group>"; };
 		5B31FAF71DF45D5200EC9D42 /* UIBarButtonItem+TextStyleApplicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+TextStyleApplicable.swift"; sourceTree = "<group>"; };
 		5B31FAF81DF45D5200EC9D42 /* UINavigationBar+TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+TextStyle.swift"; sourceTree = "<group>"; };
-		5B31FB031DF45D7700EC9D42 /* ApplicationFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationFonts.swift; path = ../../../../../ApplicationFonts.swift; sourceTree = "<group>"; };
-		5B31FB041DF45D7700EC9D42 /* ApplicationStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationStyles.swift; path = ../../../../../ApplicationStyles.swift; sourceTree = "<group>"; };
+		5BC2FEF31DF50C3900463413 /* ApplicationFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFonts.swift; sourceTree = "<group>"; };
+		5BC2FEF41DF50C3900463413 /* ApplicationStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +79,8 @@
 		5B31FADB1DF45BE900EC9D42 /* HandyTextExample */ = {
 			isa = PBXGroup;
 			children = (
-				5B31FB031DF45D7700EC9D42 /* ApplicationFonts.swift */,
-				5B31FB041DF45D7700EC9D42 /* ApplicationStyles.swift */,
+				5BC2FEF31DF50C3900463413 /* ApplicationFonts.swift */,
+				5BC2FEF41DF50C3900463413 /* ApplicationStyles.swift */,
 				5B31FADC1DF45BE900EC9D42 /* AppDelegate.swift */,
 				5B31FADE1DF45BE900EC9D42 /* ViewController.swift */,
 				5B31FAE01DF45BE900EC9D42 /* Main.storyboard */,
@@ -181,7 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B31FB061DF45D7700EC9D42 /* ApplicationStyles.swift in Sources */,
+				5BC2FEF61DF50C3900463413 /* ApplicationStyles.swift in Sources */,
 				5B31FAFF1DF45D5200EC9D42 /* TextStyle.swift in Sources */,
 				5B31FB011DF45D5200EC9D42 /* UIBarButtonItem+TextStyleApplicable.swift in Sources */,
 				5B31FB001DF45D5200EC9D42 /* TextStyleApplicable.swift in Sources */,
@@ -194,7 +194,7 @@
 				5B31FAF91DF45D5200EC9D42 /* Font.swift in Sources */,
 				5B31FAFC1DF45D5200EC9D42 /* String+TextStyle.swift in Sources */,
 				5B31FAFE1DF45D5200EC9D42 /* TextStyle+Modifiers.swift in Sources */,
-				5B31FB051DF45D7700EC9D42 /* ApplicationFonts.swift in Sources */,
+				5BC2FEF51DF50C3900463413 /* ApplicationFonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +356,7 @@
 				5B31FAED1DF45BE900EC9D42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
