@@ -119,6 +119,12 @@ To use HandyText effectively you must create an outlet for every text containing
 ### How to add links to my attributed text?
 The library doesn't add any new abilities to UIKit classes. For assigning a link to a chunk of text it uses NSLinkAttributeName. For more info refer to the [official docs](https://developer.apple.com/reference/uikit/uitextviewdelegate/1649337-textview).
 
+### How do I call my text styles?
+Avoid giving names based on specific usage, try to keep it more generic. For instance, 'screenHeading' is a good name, 'orangeHeaderInFriendsList' – is not.
+
+### Can HandyText help me improve my design specs?
+Of course. As a developer, together with design team you can define a table of common text styles and rules for describing modifiers. Instead of "HelveticaNeue-Bold, 15 pt, color: FF0000" it can be "style: header, color: tomatoRed"
+
 
 License
 ----------------
