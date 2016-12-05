@@ -16,7 +16,7 @@ Supported OS & SDK Versions
 -----------------------------
 
 Swift 3.0
-* Supported build target - iOS 9.0 (Xcode 7)
+* Supported build target - iOS 9.0 (Xcode 8)
 
 Installation
 --------------
