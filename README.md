@@ -83,7 +83,7 @@ You can highlight specific substrings with a different text style:
 let aboutZebras = "There are three species of zebras: the plains zebra, the Grévy's zebra and the mountain zebra"
 label.attributedText = aboutZebras.withStyle(.plainText).applyStyle(.header1, toOccurencesOf: "zebra")
 ```
- <img src="img/03.png" width="300">
+ <img src="img/03.png" width="400">
 
 Tag parser
 ----------------
