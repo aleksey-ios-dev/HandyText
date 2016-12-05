@@ -11,7 +11,7 @@ import UIKit
 extension TextStyle {
   
   static var plainText: TextStyle {
-    return TextStyle(font: .Georgia).withSize(20)
+    return TextStyle(font: .georgia).withSize(20)
   }
   
   static var url: TextStyle {

@@ -10,7 +10,7 @@ import Foundation
 
 extension Font {
   
-  static var Avenir: Font {
+  static var avenir: Font {
     return Font(
       light: "Avenir-Light",
       lightItalic: "Avenir-LightOblique",
@@ -20,7 +20,7 @@ extension Font {
       boldItalic: "Avenir-HeavyOblique")
   }
   
-  static var Helvetica: Font {
+  static var helvetica: Font {
     return Font(
       light: "Helvetica-Light",
       lightItalic: "Helvetica-LightOblique",
@@ -30,7 +30,7 @@ extension Font {
       boldItalic: "Helvetica-BoldOblique")
   }
   
-  static var Georgia: Font {
+  static var georgia: Font {
     return Font(
       regular: "Georgia",
       italic: "Georgia-Italic",
