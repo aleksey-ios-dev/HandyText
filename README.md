@@ -54,15 +54,7 @@ The Font is only required parameter for creating a brand new style, all other pa
   }
 ```
 
-In text there also will be clickable links. Links will have same font and size as plain text, but italic, blue and underlined:
-
-```swift
-  static func url(link: String) -> TextStyle {
-    return plainText.withForegroundColor(.blue).italic().withUnderline(.StyleSingle).withLink(link)
-  }
-```
-
-It's remarkable that styles are chained, in other words based on each other. Changing basic style font to .Georgia makes all style scheme look different, but still well aligned.
+It's remarkable that styles are chained, in other words based on each other. Changing basic style font to .georgia makes all style scheme look different, but still well fitted.
 
 Attributed strings
 ----------------
@@ -70,8 +62,10 @@ Attributed strings
 The costs of using text styles is switching to attributed text, which is supported by the most of UIKit classes.
 
 ```swift
-self.testLabel.attributedText = "Hello World".withStyle(.plainText)
+self.testLabel.attributedText = "Hello, World!".withStyle(.plainText)
 ```
+
+[[https://github.com/mmrmmlrr/HandyText/blob/task/readme/img/01.png|alt=helloworld]]
 
 Tag parser
 ----------------
