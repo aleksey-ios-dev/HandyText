@@ -63,7 +63,7 @@ The costs of using text styles is switching to attributed text, which is support
 ```swift
 label.attributedText = "Hello, World!".withStyle(.plainText)
 ```
- <img src="img/01.png" width="100">
+ <img src="img/01.png" width="200">
 
 
 Attributed string can be combined to achieve more complex appearance:
@@ -83,25 +83,21 @@ label.attributedText = text.withStyle(.plainText).applyStyle(.header1, toOccuren
  <img src="img/03.png" width="400">
 
 
-Tag parser
-----------------
-
 For displaying strings with tags you define a tag scheme:
-
 ```swift
     let scheme = TagScheme()
     scheme.forTag("b") { $0.bold() }
     scheme.forTag("i") { $0.italic() }
 ```
 In the scheme for each custom tag you register a block defining the modification of the initial text style.
-
+Nested tags are supported. Text marked as following ```"<i><b>lions</b></i>"``` will be bold italic.
 To convert a string into an attributed string:
-
 ```swift
 let result = "about <i>zebras</i>".withStyle(.plainText, tagScheme: scheme)
 ```
+ <img src="img/04.png" width="400">
 
-Nested tags are supported. Text marked as following ```"<i><b>lions</b></i>"``` will be bold italic.
+
 
 
 License
