@@ -64,7 +64,7 @@ The costs of using text styles is switching to attributed text, which is support
 ```swift
 self.testLabel.attributedText = "Hello, World!".withStyle(.plainText)
 ```
-![Alt text](HandyText/img/01.png?raw=true "Hello!!!")
+![Alt text](img/01.png?raw=true "Hello!!!")
 
 Tag parser
 ----------------
