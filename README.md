@@ -113,6 +113,11 @@ Here are some ideas. By using Dynamic Text Size in the base style, you will make
 
 <img src="img/06.jpg" width="600">
 
+### Too many outlets!
+To use HandyText effectively you must create an outlet for every text containing view. Is it that bad? In well-designed projects all strings are kept in a single file: Localizable.strings. Not in storyboards, not in the code. With this approach the whole app can be translated into a new language without changing a line of code. HandyText libs encourages you to use this approach: fetch a localized string, apply a style, display the result in the corresponding outlet.
+
+### How to add links to my attributed text?
+The library doesn't add any new abilities to UIKit classes. For assigning a link to a chunk of text it uses NSLinkAttributeName. For more info refer to the [official docs](https://developer.apple.com/reference/uikit/uitextviewdelegate/1649337-textview).
 
 
 License
