@@ -105,11 +105,13 @@ As little as possible. Average application has 2-3 basic and several complementa
 
 ### Absolute or relative size?
 You are used to define text size in points: 10 for plain text, 15 for heading and so on. But let's look from another angle: what this numbers mean? I guess, the designer could think something like 'let headers be a half times more than normal text'. Due to method ```withSizeMultiplied(by:)``` you can define text sizes proportionally. In this case, when the base style changes its size, the whole text scheme scales proportionally. Baseline offset can also be defined relative, which will keep proportions in custom superscripts like below:
- <img src="img/05.png" width="250">
+
+<img src="img/05.png" width="250">
 
 ### What can make the text size change?
 Here are some ideas. By using Dynamic Text Size in the base style, you will make your app sensitive to the Accessibility preferences of the device. For large devices it's reasonable to use slightly larger fonts. Some apps allow users to change appearance themes. With HandyText updating fonts becomes a simple task.
- <img src="img/06.jpg" width="600">
+
+<img src="img/06.jpg" width="600">
 
 
 
