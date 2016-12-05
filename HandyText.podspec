@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name     = 'HandyText'
-  s.version  = '1.2.0'
+  s.version  = '1.2.1'
   s.ios.deployment_target = '9.0'
   s.license  = 'MIT'
   s.summary  = 'HandyText library helps you manage text dtyles in a declarative manner.'
