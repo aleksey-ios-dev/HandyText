@@ -171,6 +171,14 @@ extension TextStyle {
     return copy
   }
   
+  //MARK: - Ligatures
+  
+  public func withLigatures(enabled: Bool) -> TextStyle {
+    let copy = self.copy()
+    copy.textAttributes[NSLigatureAttributeName] = NSNumber(integerLiteral: enabled ? 1 : 0)
+    return copy
+  }
+  
   //MARK: - Stroke
   
   public func withStrokeWidth(_ width: CGFloat) -> TextStyle {
