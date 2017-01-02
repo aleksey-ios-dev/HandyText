@@ -19,15 +19,14 @@ extension TextStyle {
   
   public func withForegroundColor(_ color: UIColor) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSForegroundColorAttributeName] = color
-    copy.refreshOpacity()
+    foregroundColor = color
     return copy
   }
   
   public func withBackgroundColor(_ color: UIColor) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSBackgroundColorAttributeName] = color
-    copy.refreshOpacity()
+    copy.backgroundColor = color
+    
     return copy
   }
   
@@ -146,14 +145,13 @@ extension TextStyle {
   
   public func withUnderline(_ style: NSUnderlineStyle) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSUnderlineStyleAttributeName] = style.rawValue as AnyObject?
+    copy.underlineStyle = underlineStyle
     return copy
   }
   
   public func withUnderlineColor(_ color: UIColor?) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSUnderlineColorAttributeName] = color
-    refreshOpacity()
+    copy.underlineColor = underlineColor
     return copy
   }
   
@@ -161,13 +159,13 @@ extension TextStyle {
   
   public func withStrikethrough(_ strikethrough: Bool) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSStrikethroughStyleAttributeName] = strikethrough as AnyObject?
+    copy.strikethrough = strikethrough
     return copy
   }
   
   public func withStrikethroughColor(_ color: UIColor?) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSStrikethroughColorAttributeName] = color
+    copy.strikeThroughColor = color
     return copy
   }
   
@@ -175,7 +173,7 @@ extension TextStyle {
   
   public func withLigatures(enabled: Bool) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSLigatureAttributeName] = NSNumber(integerLiteral: enabled ? 1 : 0)
+    copy.ligaturesEnabled = enabled
     return copy
   }
   
@@ -183,13 +181,13 @@ extension TextStyle {
   
   public func withStrokeWidth(_ width: CGFloat) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSStrokeWidthAttributeName] = width as AnyObject?
+    copy.strokeWidth = width
     return copy
   }
 
   public func withStrokeColor(_ color: UIColor?) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSStrokeColorAttributeName] = color
+    copy.strokeColor = color
     return copy
   }
   
@@ -197,7 +195,8 @@ extension TextStyle {
   
   public func withShadow(_ shadow: NSShadow?) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSShadowAttributeName] = shadow
+    copy.shadow = shadow
+
     return copy
   }
   
@@ -213,11 +212,7 @@ extension TextStyle {
   
   public func withLink(_ link: String?) -> TextStyle {
     let copy = self.copy()
-    if let link = link {
-      copy.textAttributes[NSLinkAttributeName] = NSURL(string: link)
-    } else {
-      copy.textAttributes[NSLinkAttributeName] = nil
-    }
+    copy.link = link
     return copy
   }
   
@@ -225,13 +220,13 @@ extension TextStyle {
   
   public func withBaselineOffset(absolute offset: CGFloat) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSBaselineOffsetAttributeName] = offset as AnyObject?
+    copy.baselineOffset = .absolute(offset)
     return copy
   }
   
   func withBaselineOffset(relative ratio: CGFloat) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSBaselineOffsetAttributeName] = (size * ratio) as AnyObject?
+    copy.baselineOffset = .relative(ratio)
     return copy
   }
   
@@ -290,15 +285,15 @@ extension TextStyle {
   
   public func withLetterSpacing(_ spacing: CGFloat) -> TextStyle {
     let copy = self.copy()
-    copy.textAttributes[NSKernAttributeName] = spacing as AnyObject?
+    copy.letterSpacing = spacing
     return copy
   }
   
   // MARK: - Private
 
-  private func refreshOpacity() {
-    let newOpacity = self.opacity
-    self.opacity = newOpacity
-  }
+//  private func refreshOpacity() {
+//    let newOpacity = self.opacity
+//    self.opacity = newOpacity
+//  }
 
 }
