@@ -16,14 +16,14 @@ public func +(left: NSAttributedString, right: NSAttributedString) -> NSAttribut
 
 extension NSAttributedString {
   
-  public func applyStyle(_ style: TextStyle, toOccurencesOf substring: String) -> NSAttributedString {
-    guard let range = rangeOf(substring) else { return self }
+  public func applyStyle(_ style: TextStyle, toOccurencesOf substring: String, ignoringCase: Bool = false) -> NSAttributedString {
+    guard let range = rangeOf(substring, ignoringCase: ignoringCase) else { return self }
 
     let head = attributedSubstring(from: NSRange.init(location: 0, length: range.location))
     let foundString = attributedSubstring(from: range)
     let rest = attributedSubstring(from: NSMakeRange(range.length + range.location, self.length - (range.length + range.location)))
     
-    return head + foundString.string.withStyle(style) + rest.applyStyle(style, toOccurencesOf: substring)
+    return head + foundString.string.withStyle(style) + rest.applyStyle(style, toOccurencesOf: substring, ignoringCase: ignoringCase)
   }
   
   public func applyStyle(_ style: TextStyle, in range: NSRange?) -> NSAttributedString {
@@ -35,9 +35,9 @@ extension NSAttributedString {
     return head + substringInRange.string.withStyle(style) + rest
   }
   
-  func rangeOf(_ string: String) -> NSRange? {
+  func rangeOf(_ string: String, ignoringCase: Bool) -> NSRange? {
     let aString = self.string as NSString
-    let range = aString.range(of: string)
+    let range = aString.range(of: string, options: ignoringCase ? [NSString.CompareOptions.caseInsensitive] : [])
     
     return range.location == NSNotFound ? nil : range
   }
