@@ -17,7 +17,7 @@ class ViewController: UIViewController {
   private weak var textField: UITextField!
   
   @IBOutlet
-  private weak var textview: UITextView!
+  private weak var textView: UITextView!
   
   @IBOutlet
   private weak var button: UIButton!
@@ -37,10 +37,9 @@ class ViewController: UIViewController {
     
     let textViewText = "Zebras are several species of African equids (horse family) united by their distinctive black and white striped coats. Their stripes come in different patterns, unique to each individual."
     
-    textview.attributedText = textViewText.withStyle(.plainText).applyStyle(.url, toOccurencesOf: "species")
-    
+    textView.attributedText = textViewText.withStyle(.plainText).applyStyle(.url, toOccurencesOf: "species")
+
     button.setAttributedTitle("Got it!".withStyle(.button), for: .normal)
   }
   
 }
-

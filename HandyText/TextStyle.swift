@@ -12,54 +12,56 @@ import UIKit
 public class TextStyle {
   
   public enum BaselineOffset {
+    case none
     case absolute(CGFloat)
     case relative(CGFloat)
   }
   
   public enum CaseTrait {
-    case normal, capitalized, lowercase, uppercase
+    case none, capitalized, lowercase, uppercase
   }
-  
-  //TODO: REFACTOR >>>>>>>
   
   public var textAttributes: [String: AnyObject] {
     get {
       var attributes = [String: AnyObject]()
       attributes[NSForegroundColorAttributeName] = foregroundColor.withAlphaComponent(opacity)
       attributes[NSBackgroundColorAttributeName] = backgroundColor?.withAlphaComponent(opacity)
-      attributes[NSUnderlineColorAttributeName] = underlineColor?.withAlphaComponent(opacity)
       attributes[NSStrikethroughColorAttributeName] = strikeThroughColor?.withAlphaComponent(opacity)
-      attributes[NSStrikethroughColorAttributeName] = strokeColor?.withAlphaComponent(opacity)
+      attributes[NSStrokeColorAttributeName] = strokeColor?.withAlphaComponent(opacity)
+      attributes[NSStrokeWidthAttributeName] = strokeWidth as AnyObject?
       attributes[NSParagraphStyleAttributeName] = paragraphStyle
       attributes[NSFontAttributeName] = UIFont(name: typeface, size: size)
+      attributes[NSLigatureAttributeName] = ligaturesEnabled as AnyObject?
+      attributes[NSStrikethroughStyleAttributeName] = Int(strikethrough ? 1 : 0) as AnyObject?
+      attributes[NSUnderlineStyleAttributeName] = underlineStyle.rawValue as AnyObject?
+      attributes[NSUnderlineColorAttributeName] = underlineColor?.withAlphaComponent(opacity)
+      attributes[NSShadowAttributeName] = shadow
+      attributes[NSLinkAttributeName] = link as AnyObject?
       
-      if let baselineOffset = baselineOffset {
-        switch baselineOffset {
-        case .absolute(let offset):
-          attributes[NSBaselineOffsetAttributeName] = 
-        case .relative(let offset):
-          attributes[NSBaselineOffsetAttributeName] = offset * size
-        default:
-          break
-        }
+      let calculatedOffset: CGFloat
+      switch baselineOffset {
+      case .absolute(let offset):
+        calculatedOffset = offset
+      case .relative(let offset):
+        calculatedOffset = offset * size
+      case .none:
+        calculatedOffset = 0.0
       }
+      
+      attributes[NSBaselineOffsetAttributeName] = calculatedOffset as AnyObject?
       
       return attributes
     }
   }
   
-  
   public var paragraphStyle = NSMutableParagraphStyle()
-  
-  //<<<<<<<<<<<
   
   /// STATE
 
-  
   public var font: Font
   public var size: CGFloat = UIFont.preferredFont(forTextStyle: .body).pointSize
   public var thickness = Font.Thickness.regular
-  public var caseTrait = CaseTrait.normal
+  public var caseTrait = CaseTrait.none
   public var isItalic = false
   public var opacity: CGFloat = 1.0
   public var foregroundColor = UIColor.black
@@ -73,7 +75,7 @@ public class TextStyle {
   public var strokeWidth: CGFloat = 0.0
   public var shadow: NSShadow?
   public var link: String?
-  public var baselineOffset: BaselineOffset?
+  public var baselineOffset = BaselineOffset.none
   public var letterSpacing: CGFloat?
   
 	public var typeface: String {
@@ -141,16 +143,17 @@ public class TextStyle {
     copy.opacity = opacity
     copy.foregroundColor = foregroundColor
     copy.backgroundColor = backgroundColor
-    copy.underlineColor = underlineColor
     copy.strikeThroughColor = strikeThroughColor
-    copy.strokeColor = strokeColor
+    copy.underlineColor = underlineColor
     copy.underlineStyle = underlineStyle
     copy.strikethrough = strikethrough
     copy.ligaturesEnabled = ligaturesEnabled
+    copy.strokeColor = strokeColor
     copy.strokeWidth = strokeWidth
     copy.shadow = shadow
     copy.link = link
     copy.letterSpacing = letterSpacing
+    copy.baselineOffset = baselineOffset
     
     return copy
   }

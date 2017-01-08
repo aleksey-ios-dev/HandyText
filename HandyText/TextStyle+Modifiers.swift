@@ -19,14 +19,13 @@ extension TextStyle {
   
   public func withForegroundColor(_ color: UIColor) -> TextStyle {
     let copy = self.copy()
-    foregroundColor = color
+    copy.foregroundColor = color
     return copy
   }
   
   public func withBackgroundColor(_ color: UIColor) -> TextStyle {
     let copy = self.copy()
     copy.backgroundColor = color
-    
     return copy
   }
   
@@ -53,7 +52,6 @@ extension TextStyle {
   public func withDynamicFontStyle(_ style: DynamicFontStyle) -> TextStyle {
     let copy = self.copy()
     copy.size = UIFont.preferredFont(forTextStyle: UIFontTextStyle(rawValue: style.literal)).pointSize
-  
     return copy
   }
   
@@ -109,7 +107,7 @@ extension TextStyle {
     return copy
   }
   
-  public func straight() -> TextStyle {
+  public func roman() -> TextStyle {
     let copy = self.copy()
     copy.isItalic = false
     return copy
@@ -135,23 +133,17 @@ extension TextStyle {
     return copy
   }
   
-  public func normalCase() -> TextStyle {
-    let copy = self.copy()
-    copy.caseTrait = .normal
-    return copy
-  }
-  
   //MARK: - Underline
   
   public func withUnderline(_ style: NSUnderlineStyle) -> TextStyle {
     let copy = self.copy()
-    copy.underlineStyle = underlineStyle
+    copy.underlineStyle = style
     return copy
   }
   
   public func withUnderlineColor(_ color: UIColor?) -> TextStyle {
     let copy = self.copy()
-    copy.underlineColor = underlineColor
+    copy.underlineColor = color
     return copy
   }
   
@@ -196,7 +188,6 @@ extension TextStyle {
   public func withShadow(_ shadow: NSShadow?) -> TextStyle {
     let copy = self.copy()
     copy.shadow = shadow
-
     return copy
   }
   
@@ -235,7 +226,6 @@ extension TextStyle {
   public func withParagraphStyle(_ style: NSParagraphStyle) -> TextStyle {
     let copy = self.copy()
     copy.paragraphStyle = style.mutableCopy() as! NSMutableParagraphStyle
-  
     return copy
   }
   
@@ -288,12 +278,5 @@ extension TextStyle {
     copy.letterSpacing = spacing
     return copy
   }
-  
-  // MARK: - Private
-
-//  private func refreshOpacity() {
-//    let newOpacity = self.opacity
-//    self.opacity = newOpacity
-//  }
 
 }
