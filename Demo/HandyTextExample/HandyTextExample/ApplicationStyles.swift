@@ -11,7 +11,7 @@ import UIKit
 extension TextStyle {
   
   static var plainText: TextStyle {
-    return TextStyle(font: .georgia).withSize(20)
+    return TextStyle(font: .helvetica).withSize(12)
   }
   
   static var url: TextStyle {
@@ -24,8 +24,8 @@ extension TextStyle {
   
   static var button: TextStyle {
     let shadow = NSShadow()
-    shadow.shadowOffset = CGSize(width: 1, height: 1)
-    shadow.shadowBlurRadius = 1
+    shadow.shadowOffset = CGSize(width: 1.0, height: 1.0)
+    shadow.shadowBlurRadius = 1.0
     shadow.shadowColor = UIColor.lightGray
 
     return header.withForegroundColor(.black).withShadow(shadow)

@@ -19,7 +19,7 @@ extension String {
       string = self.lowercased()
     case .uppercase:
       string = self.uppercased()
-    case .normal:
+    case .none:
       string = self
     }
     
