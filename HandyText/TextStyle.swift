@@ -21,22 +21,22 @@ public class TextStyle {
     case none, capitalized, lowercase, uppercase
   }
   
-  public var textAttributes: [String: AnyObject] {
+  public var textAttributes: [NSAttributedStringKey: AnyObject] {
     get {
-      var attributes = [String: AnyObject]()
-      attributes[NSForegroundColorAttributeName] = foregroundColor.withAlphaComponent(opacity)
-      attributes[NSBackgroundColorAttributeName] = backgroundColor?.withAlphaComponent(opacity)
-      attributes[NSStrikethroughColorAttributeName] = strikeThroughColor?.withAlphaComponent(opacity)
-      attributes[NSStrokeColorAttributeName] = strokeColor?.withAlphaComponent(opacity)
-      attributes[NSStrokeWidthAttributeName] = strokeWidth as AnyObject?
-      attributes[NSParagraphStyleAttributeName] = paragraphStyle
-      attributes[NSFontAttributeName] = UIFont(name: typeface, size: size)
-      attributes[NSLigatureAttributeName] = ligaturesEnabled as AnyObject?
-      attributes[NSStrikethroughStyleAttributeName] = Int(strikethrough ? 1 : 0) as AnyObject?
-      attributes[NSUnderlineStyleAttributeName] = underlineStyle.rawValue as AnyObject?
-      attributes[NSUnderlineColorAttributeName] = underlineColor?.withAlphaComponent(opacity)
-      attributes[NSShadowAttributeName] = shadow
-      attributes[NSLinkAttributeName] = link as AnyObject?
+      var attributes = [NSAttributedStringKey: AnyObject]()
+      attributes[.foregroundColor] = foregroundColor.withAlphaComponent(opacity)
+      attributes[.backgroundColor] = backgroundColor?.withAlphaComponent(opacity)
+      attributes[.strikethroughColor] = strikeThroughColor?.withAlphaComponent(opacity)
+      attributes[.strokeColor] = strokeColor?.withAlphaComponent(opacity)
+      attributes[.strokeWidth] = strokeWidth as AnyObject?
+      attributes[.paragraphStyle] = paragraphStyle
+      attributes[.font] = UIFont(name: typeface, size: size)
+      attributes[.ligature] = ligaturesEnabled as AnyObject?
+      attributes[.strikethroughStyle] = Int(strikethrough ? 1 : 0) as AnyObject?
+      attributes[.underlineStyle] = underlineStyle.rawValue as AnyObject?
+      attributes[.underlineColor] = underlineColor?.withAlphaComponent(opacity)
+      attributes[.shadow] = shadow
+      attributes[.link] = link as AnyObject?
       
       let calculatedOffset: CGFloat
       switch baselineOffset {
@@ -48,7 +48,7 @@ public class TextStyle {
         calculatedOffset = 0.0
       }
       
-      attributes[NSBaselineOffsetAttributeName] = calculatedOffset as AnyObject?
+      attributes[.baselineOffset] = calculatedOffset as AnyObject?
       
       return attributes
     }
