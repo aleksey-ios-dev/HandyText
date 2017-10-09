@@ -24,7 +24,7 @@ extension String {
   }
   
   private func decompose() -> [(tag: String?, text: String?)] {
-    if characters.isEmpty { return [] }
+    if isEmpty { return [] }
     
     let components = self.components(separatedBy: "<")
     if components.count == 1 {
@@ -33,8 +33,7 @@ extension String {
       let tag = components[1].components(separatedBy: ">").first!
       let head = components[0]
       let body = self.components(separatedBy: "<\(tag)>")[1].components(separatedBy: "</\(tag)>").first
-      let tail = substring(from: range(of: "</\(tag)>")!.upperBound)
-      
+      let tail = String(suffix(from: range(of: "</\(tag)>")!.upperBound))
       var result = [(tag: String?, text: String?)]()
       result.append((nil, head))
       result.append((tag, body))
