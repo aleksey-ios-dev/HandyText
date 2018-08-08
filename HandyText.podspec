@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   s.source_files = '**/*.{m,h,mm,hpp,cpp,c,swift}'
   s.requires_arc = true
   s.swift_version = '3.3'
+  s.module_map = 'HandyText.modulemap'
 
 
 end

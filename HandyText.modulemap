@@ -1,0 +1,6 @@
+framework module HandyText {
+	umbrella header "HandyText-umbrella.h"
+
+	export *
+	module * { export * }
+}
