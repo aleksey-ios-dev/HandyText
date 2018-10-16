@@ -101,29 +101,29 @@ public class TextStyle {
 	
   public enum DynamicFontStyle {
     
-    case Title1, Title2, Title3, Headline, Subheadline, Body, Callout, Footnote, Caption1, Caption2
+    case title1, title2, title3, headline, subheadline, body, callout, footnote, caption1, caption2
     
     var literal: String {
       switch self {
-      case .Title1:
+      case .title1:
         return UIFontTextStyle.title1.rawValue
-      case .Title2:
+      case .title2:
         return UIFontTextStyle.title2.rawValue
-      case .Title3:
+      case .title3:
         return UIFontTextStyle.title3.rawValue
-      case .Headline:
+      case .headline:
         return UIFontTextStyle.headline.rawValue
-      case .Subheadline:
+      case .subheadline:
         return UIFontTextStyle.subheadline.rawValue
-      case .Body:
+      case .body:
         return UIFontTextStyle.body.rawValue
-      case .Callout:
+      case .callout:
         return UIFontTextStyle.callout.rawValue
-      case .Footnote:
+      case .footnote:
         return UIFontTextStyle.footnote.rawValue
-      case .Caption1:
+      case .caption1:
         return UIFontTextStyle.caption1.rawValue
-      case .Caption2:
+      case .caption2:
         return UIFontTextStyle.caption2.rawValue
       }
     }
