@@ -15,7 +15,7 @@ extension TextStyle {
   }
   
   static var url: TextStyle {
-    return plainText.withForegroundColor(.blue).italic().withUnderline(.styleSingle)
+    return plainText.withForegroundColor(.blue).italic().withUnderline(.single)
   }
   
   static var header: TextStyle {
@@ -38,7 +38,7 @@ extension TagScheme {
   static var `default`: TagScheme {
     let scheme = TagScheme()
     scheme.forTag("b") { $0.bold() }
-    scheme.forTag("i") { $0.italic().withUnderline(.styleSingle) }
+    scheme.forTag("i") { $0.italic().withUnderline(.single) }
     scheme.forTag("u") { $0.uppercase() }
     
     return scheme

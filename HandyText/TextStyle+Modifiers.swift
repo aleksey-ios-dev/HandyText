@@ -51,7 +51,7 @@ extension TextStyle {
   
   public func withDynamicFontStyle(_ style: DynamicFontStyle) -> TextStyle {
     let copy = self.copy()
-    copy.size = UIFont.preferredFont(forTextStyle: UIFontTextStyle(rawValue: style.literal)).pointSize
+    copy.size = UIFont.preferredFont(forTextStyle: UIFont.TextStyle(rawValue: style.literal)).pointSize
     return copy
   }
   
