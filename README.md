@@ -15,7 +15,7 @@ The alternative way is in avoiding the use of IB for defining text appearance, b
 Supported OS & SDK Versions
 -----------------------------
 
-Swift 4.0
+Swift 4.2
 * Supported build target - iOS 9.0 and up (Xcode 8/9)
 
 Installation
@@ -29,7 +29,7 @@ pod 'HandyText'
 
 Declare own text styles as static functions or properties of TextStyle class.
 
-Version 1.4.2
+Version 1.4.3
 
 - Release version.
 

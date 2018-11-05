@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name     = 'HandyText'
-  s.version  = '1.4.2'
+  s.version  = '1.4.3'
   s.ios.deployment_target = '9.0'
   s.license  = 'MIT'
   s.summary  = 'HandyText library helps you manage text styles in a declarative manner.'
@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
   s.frameworks   = ['UIKit']
   s.source_files = '**/*.{m,h,mm,hpp,cpp,c,swift}'
   s.requires_arc = true
-  s.swift_version = '4.0'
+  s.swift_version = '4.2'
 
 end
