@@ -37,7 +37,8 @@ public class TextStyle {
             attributes[.underlineColor] = underlineColor?.withAlphaComponent(opacity)
             attributes[.shadow] = shadow
             attributes[.link] = link as AnyObject?
-            
+            attributes[.kern] = letterSpacing as AnyObject?
+          
             let calculatedOffset: CGFloat
             switch baselineOffset {
             case .absolute(let offset):
