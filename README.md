@@ -29,7 +29,7 @@ pod 'HandyText'
 
 Declare own text styles as static functions or properties of TextStyle class.
 
-Version 1.4.3
+Version 1.4.4
 
 - Release version.
 
