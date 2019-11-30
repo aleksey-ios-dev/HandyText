@@ -11,7 +11,7 @@ public protocol TextStyleApplicable {}
 
 public extension TextStyleApplicable where Self: NSObject {
   
-  public func applyAttributes(from style: TextStyle) {
+  func applyAttributes(from style: TextStyle) {
     let font = style.textAttributes[.font] as? UIFont
     let color = style.textAttributes[.foregroundColor] as? UIColor
     setValue(font, forKey: "font")
