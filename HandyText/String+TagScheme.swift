@@ -9,14 +9,18 @@ import Foundation
 
 extension String {
   
-   public func withStyle(_ style: TextStyle, tagScheme: TagScheme) -> NSAttributedString {
+   public func withStyle(_ style: TextStyle) -> NSAttributedString {
+    guard let tagScheme = style.tagScheme else {
+      return makeAttributed(with: style)
+    }
+    
     let result = NSMutableAttributedString()
     
     for (tag, substring) in decompose() {
       if let tag = tag, let substring = substring {
-        result.append(substring.withStyle(tagScheme.modifier(for: tag)(style), tagScheme: tagScheme))
+        result.append(substring.withStyle(tagScheme.modifier(for: tag)(style)))
       } else if let substring = substring {
-        result.append(substring.withStyle(style))
+        result.append(substring.makeAttributed(with: style))
       }
     }
     
@@ -44,3 +48,22 @@ extension String {
   }
   
 }
+
+private extension String {
+  
+  func makeAttributed(with style: TextStyle) -> NSAttributedString {
+    var string: String
+    
+    switch style.caseTrait {
+    case .capitalized: string = capitalized
+    case .lowercase: string = lowercased()
+    case .uppercase: string = uppercased()
+    case .none: string = self
+    }
+    
+    return NSAttributedString(string: string,
+                              attributes: style.textAttributes)
+  }
+
+}
+

@@ -24,26 +24,27 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    navigationController?.navigationBar.applyAttributes(from: TextStyle.header.withForegroundColor(.black))
+
+    navigationController?.navigationBar.applyAttributes(from: TextStyle.header.foregroundColor(.black))
     
     title = "Handy text demo"
     
-    label.attributedText = "about <i>zebras</i>".withStyle(.header, tagScheme: .default)
-    
+    label.setText("about <i>zebras</i>", with: TextStyle.header.tagScheme(.default))
+
     textField.applyAttributes(from: .plainText)
     
-    textField.attributedPlaceholder = "search"
-      .withStyle(TextStyle.plainText
-        .withForegroundColor(.lightGray)
-        .italic())
+    textField.attributedPlaceholder = "search".withStyle(
+      TextStyle.plainText
+        .foregroundColor(.lightGray)
+        .italic()
+    )
     
     let textViewText = "Zebras are several species of African equids (horse family) united by their distinctive black and white striped coats. Their stripes come in different patterns, unique to each individual."
     
     textView.attributedText = textViewText
       .withStyle(.plainText)
       .applyStyle(.url, toOccurencesOf: "species")
-
+    
     button.setAttributedTitle("Got it!".withStyle(.button), for: .normal)
   }
   

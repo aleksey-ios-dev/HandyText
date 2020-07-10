@@ -10,16 +10,21 @@ import UIKit
 
 extension TextStyle {
   
-  static var plainText: TextStyle {
-    return TextStyle(font: .helvetica).withSize(12)
-  }
+  static var plainText = TextStyle(font: .helvetica).dynamicFontStyle(.body)
   
   static var url: TextStyle {
-    return plainText.withForegroundColor(.blue).italic().withUnderline(.single)
+    return plainText
+      .foregroundColor(.blue)
+      .italic()
+      .underline(.single)
   }
   
   static var header: TextStyle {
-    return plainText.withSizeMultiplied(by: 1.4).withForegroundColor(.orange).uppercase().bold()
+    return plainText
+      .sizeMultiplied(by: 1.4)
+      .foregroundColor(.orange)
+      .uppercase()
+      .bold()
   }
   
   static var button: TextStyle {
@@ -28,7 +33,9 @@ extension TextStyle {
     shadow.shadowBlurRadius = 1.0
     shadow.shadowColor = UIColor.lightGray
 
-    return header.withForegroundColor(.black).withShadow(shadow)
+    return header
+      .foregroundColor(.black)
+      .shadow(shadow)
   }
 
 }
@@ -38,7 +45,7 @@ extension TagScheme {
   static var `default`: TagScheme {
     let scheme = TagScheme()
     scheme.forTag("b") { $0.bold() }
-    scheme.forTag("i") { $0.italic().withUnderline(.single) }
+    scheme.forTag("i") { $0.italic().underline(.single) }
     scheme.forTag("u") { $0.uppercase() }
     
     return scheme
