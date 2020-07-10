@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     title = "Handy text demo"
     
-    label.setText("about <i>zebras</i>", with: TextStyle.header.tagScheme(.default))
+    label.setText("<u>about</u> <i>zebras</i>", with: TextStyle.header.tagScheme(.default))
 
     textField.applyAttributes(from: .plainText)
     

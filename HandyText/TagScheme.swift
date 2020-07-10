@@ -13,9 +13,11 @@ public class TagScheme {
   
   private var map = [String: TextStyleModifier]()
   
-  public init() {}
+  public init(decorator: (TagScheme) -> Void) {
+    decorator(self)
+  }
   
-  public func forTag(_ tag: String, use modifier: @escaping TextStyleModifier) {
+  public func tag(_ tag: String, use modifier: @escaping TextStyleModifier) {
     map[tag] = modifier
   }
   

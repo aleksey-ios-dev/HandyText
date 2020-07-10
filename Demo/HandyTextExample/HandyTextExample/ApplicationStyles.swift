@@ -10,7 +10,7 @@ import UIKit
 
 extension TextStyle {
   
-  static var plainText = TextStyle(font: .helvetica).dynamicFontStyle(.body)
+  static var plainText = TextStyle(font: .georgia).dynamicFontStyle(.body)
   
   static var url: TextStyle {
     return plainText
@@ -43,12 +43,11 @@ extension TextStyle {
 extension TagScheme {
   
   static var `default`: TagScheme {
-    let scheme = TagScheme()
-    scheme.forTag("b") { $0.bold() }
-    scheme.forTag("i") { $0.italic().underline(.single) }
-    scheme.forTag("u") { $0.uppercase() }
-    
-    return scheme
+    return .init {
+      $0.tag("b") { $0.bold() }
+      $0.tag("i") { $0.italic().underline(.single) }
+      $0.tag("u") { $0.uppercase() }
+    }
   }
   
 }
