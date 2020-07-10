@@ -14,7 +14,6 @@
 		5B31FAE71DF45BE900EC9D42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FAE51DF45BE900EC9D42 /* LaunchScreen.storyboard */; };
 		5B31FAF91DF45D5200EC9D42 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAEF1DF45D5200EC9D42 /* Font.swift */; };
 		5B31FAFA1DF45D5200EC9D42 /* NSAttributedString+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF01DF45D5200EC9D42 /* NSAttributedString+TextStyle.swift */; };
-		5B31FAFB1DF45D5200EC9D42 /* String+TagScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF11DF45D5200EC9D42 /* String+TagScheme.swift */; };
 		5B31FAFC1DF45D5200EC9D42 /* String+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF21DF45D5200EC9D42 /* String+TextStyle.swift */; };
 		5B31FAFD1DF45D5200EC9D42 /* TagScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF31DF45D5200EC9D42 /* TagScheme.swift */; };
 		5B31FAFE1DF45D5200EC9D42 /* TextStyle+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF41DF45D5200EC9D42 /* TextStyle+Modifiers.swift */; };
@@ -36,7 +35,6 @@
 		5B31FAE81DF45BE900EC9D42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B31FAEF1DF45D5200EC9D42 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		5B31FAF01DF45D5200EC9D42 /* NSAttributedString+TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+TextStyle.swift"; sourceTree = "<group>"; };
-		5B31FAF11DF45D5200EC9D42 /* String+TagScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TagScheme.swift"; sourceTree = "<group>"; };
 		5B31FAF21DF45D5200EC9D42 /* String+TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TextStyle.swift"; sourceTree = "<group>"; };
 		5B31FAF31DF45D5200EC9D42 /* TagScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagScheme.swift; sourceTree = "<group>"; };
 		5B31FAF41DF45D5200EC9D42 /* TextStyle+Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextStyle+Modifiers.swift"; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			children = (
 				5B31FAEF1DF45D5200EC9D42 /* Font.swift */,
 				5B31FAF01DF45D5200EC9D42 /* NSAttributedString+TextStyle.swift */,
-				5B31FAF11DF45D5200EC9D42 /* String+TagScheme.swift */,
 				5B31FAF21DF45D5200EC9D42 /* String+TextStyle.swift */,
 				5B31FAF31DF45D5200EC9D42 /* TagScheme.swift */,
 				5B31FAF41DF45D5200EC9D42 /* TextStyle+Modifiers.swift */,
@@ -191,7 +188,6 @@
 				5B31FAFD1DF45D5200EC9D42 /* TagScheme.swift in Sources */,
 				5B31FB021DF45D5200EC9D42 /* UINavigationBar+TextStyle.swift in Sources */,
 				5B31FAFA1DF45D5200EC9D42 /* NSAttributedString+TextStyle.swift in Sources */,
-				5B31FAFB1DF45D5200EC9D42 /* String+TagScheme.swift in Sources */,
 				5B31FAF91DF45D5200EC9D42 /* Font.swift in Sources */,
 				5B31FAFC1DF45D5200EC9D42 /* String+TextStyle.swift in Sources */,
 				5B31FAFE1DF45D5200EC9D42 /* TextStyle+Modifiers.swift in Sources */,
