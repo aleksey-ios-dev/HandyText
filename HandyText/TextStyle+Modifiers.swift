@@ -21,193 +21,202 @@ extension TextStyle {
   //MARK: - Fill color
   
   public func foregroundColor(_ color: UIColor) -> TextStyle {
-    return .based(on: self) { $0.foregroundColor = color }
+    return modifyingCopy(by: \.foregroundColor, with: color)
   }
   
   public func backgroundColor(_ color: UIColor) -> TextStyle {
-    return .based(on: self) { $0.backgroundColor = color }
+    return modifyingCopy(by: \.backgroundColor, with: color)
   }
   
   //MARK: - Size
   
   public func size(_ size: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.size = size }
+    modifyingCopy(by: \.size, with: size)
   }
   
   public func sizeIncremented(by increment: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.size += increment }
+    modifyingCopy(by: \.size, with: size + increment)
   }
   
   public func sizeMultiplied(by multiplier: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.size *= multiplier }
+    modifyingCopy(by: \.size, with: size * multiplier)
   }
   
   public func dynamicFontStyle(_ style: DynamicFontStyle) -> TextStyle {
-    return .based(on: self) { $0.size = UIFont.preferredFont(forTextStyle: UIFont.TextStyle(rawValue: style.literal)).pointSize }
+    modifyingCopy(by: \.size, with:  UIFont.preferredFont(forTextStyle: UIFont.TextStyle(rawValue: style.literal)).pointSize)
   }
   
   //MARK: - Thickness
   
   public func extralight() -> TextStyle {
-    return .based(on: self) { $0.thickness = .extralight }
+    modifyingCopy(by: \.thickness, with: .extralight)
   }
   
   public func light() -> TextStyle {
-    return .based(on: self) { $0.thickness = .light }
+    modifyingCopy(by: \.thickness, with: .light)
   }
   
   public func regular() -> TextStyle {
-    return .based(on: self) { $0.thickness = .regular }
+    modifyingCopy(by: \.thickness, with: .regular)
   }
   
   public func medium() -> TextStyle {
-    return .based(on: self) { $0.thickness = .medium }
+    modifyingCopy(by: \.thickness, with: .medium)
   }
   
   public func bold() -> TextStyle {
-    return .based(on: self) { $0.thickness = .bold }
+    modifyingCopy(by: \.thickness, with: .bold)
   }
   
   public func heavy() -> TextStyle {
-    return .based(on: self) { $0.thickness = .heavy }
+    modifyingCopy(by: \.thickness, with: .heavy)
   }
   
   public func extraheavy() -> TextStyle {
-    return .based(on: self) { $0.thickness = .extraheavy }
+    modifyingCopy(by: \.thickness, with: .extraheavy)
   }
   
   //MARK: - Slant
   
   public func italic() -> TextStyle {
-    return .based(on: self) { $0.isItalic = true }
+    modifyingCopy(by: \.isItalic, with: true)
   }
   
   public func roman() -> TextStyle {
-    return .based(on: self) { $0.isItalic = false }
+    modifyingCopy(by: \.isItalic, with: false)
   }
   
   //MARK: - Case Trait, mutually exclusive
   
   public func capitalized() -> TextStyle {
-    return .based(on: self) { $0.caseTrait = .capitalized }
+    modifyingCopy(by: \.caseTrait, with: .capitalized)
   }
   
   public func lowercase() -> TextStyle {
-    return .based(on: self) { $0.caseTrait = .lowercase }
+    modifyingCopy(by: \.caseTrait, with: .lowercase)
   }
   
   public func uppercase() -> TextStyle {
-    return .based(on: self) { $0.caseTrait = .uppercase }
+    modifyingCopy(by: \.caseTrait, with: .uppercase)
   }
   
   //MARK: - Underline
   
   public func underline(_ style: NSUnderlineStyle) -> TextStyle {
-    return .based(on: self) { $0.underlineStyle = style }
+    modifyingCopy(by: \.underlineStyle, with: style)
   }
   
   public func underlineColor(_ color: UIColor?) -> TextStyle {
-    return .based(on: self) { $0.underlineColor = color }
+    modifyingCopy(by: \.underlineColor, with: color)
   }
   
   //MARK: - Strikethrough
   
   public func strikethrough(_ strikethrough: Bool) -> TextStyle {
-    return .based(on: self) { $0.strikethrough = strikethrough }
+    modifyingCopy(by: \.strikethrough, with: strikethrough)
   }
   
   public func strikethroughColor(_ color: UIColor?) -> TextStyle {
-    return .based(on: self) { $0.strikeThroughColor = color }
+    modifyingCopy(by: \.strikeThroughColor, with: strikeThroughColor)
   }
   
   //MARK: - Ligatures
   
   public func ligaturesEnabled(_ enabled: Bool) -> TextStyle {
-    return .based(on: self) { $0.ligaturesEnabled = enabled }
+    modifyingCopy(by: \.ligaturesEnabled, with: enabled)
   }
   
   //MARK: - Stroke
   
   public func strokeWidth(_ width: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.strokeWidth = width }
+    modifyingCopy(by: \.strokeWidth, with: strokeWidth)
   }
   
   public func strokeColor(_ color: UIColor?) -> TextStyle {
-    return .based(on: self) { $0.strokeColor = color }
+    modifyingCopy(by: \.strokeColor, with: color)
   }
   
   //MARK: - Shadow
   
   public func shadow(_ shadow: NSShadow?) -> TextStyle {
-    return .based(on: self) { $0.shadow = shadow }
+    modifyingCopy(by: \.shadow, with: shadow)
   }
   
   // MARK: - Opacity
   
   public func opacity(_ opacity: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.opacity = opacity }
+    modifyingCopy(by: \.opacity, with: opacity)
   }
   
   //MARK: - Link 
   
   public func link(_ link: String?) -> TextStyle {
-    return .based(on: self) { $0.link = link }
+    modifyingCopy(by: \.link, with: link)
   }
   
   //MARK: - Offset
   
   public func baselineOffset(absolute offset: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.baselineOffset = .absolute(offset) }
+    modifyingCopy(by: \.baselineOffset, with: .absolute(offset))
   }
   
   func baselineOffset(relative ratio: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.baselineOffset = .relative(ratio) }
+    modifyingCopy(by: \.baselineOffset, with: .relative(ratio))
   }
   
   //MARK: - Paragraph style options
   
   public func paragraphStyle(_ style: NSParagraphStyle) -> TextStyle {
-    return .based(on: self) { $0.paragraphStyle = style.mutableCopy() as! NSMutableParagraphStyle }
+    modifyingCopy(by: \.paragraphStyle, with: style.mutableCopy() as! NSMutableParagraphStyle)
   }
   
   public func lineBreakMode(_ mode: NSLineBreakMode) -> TextStyle {
-    return .based(on: self) { $0.paragraphStyle.lineBreakMode = mode }
+    modifyingCopy(by: \.paragraphStyle.lineBreakMode, with: mode)
   }
   
   public func headIndent(_ indent: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.paragraphStyle.headIndent = indent }
+    modifyingCopy(by: \.paragraphStyle.headIndent, with: indent)
   }
   
   public func firstLineIndent(_ indent: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.paragraphStyle.firstLineHeadIndent = indent }
+    modifyingCopy(by: \.paragraphStyle.firstLineHeadIndent, with: indent)
   }
   
   public func paragraphSpacing(_ spacing: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.paragraphStyle.paragraphSpacing = spacing }
+    modifyingCopy(by: \.paragraphStyle.paragraphSpacing, with: spacing)
   }
   
   public func paragraphSpacingBefore(_ spacing: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.paragraphStyle.paragraphSpacingBefore = spacing }
+    modifyingCopy(by: \.paragraphStyle.paragraphSpacingBefore, with: spacing)
   }
   
   public func alignment(_ alignment: NSTextAlignment) -> TextStyle {
-    return .based(on: self) { $0.paragraphStyle.alignment = alignment }
+    modifyingCopy(by: \.paragraphStyle.alignment, with: alignment)
   }
   
   public func lineSpacing(_ spacing: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.paragraphStyle.lineSpacing = spacing }
+    modifyingCopy(by: \.paragraphStyle.lineSpacing, with: spacing)
   }
   
   // MARK: - Letter spacing
   
   public func letterSpacing(_ spacing: CGFloat) -> TextStyle {
-    return .based(on: self) { $0.letterSpacing = spacing }
+    modifyingCopy(by: \.letterSpacing, with: spacing)
   }
   
   // MARK: - Tag scheme
   
   public func tagScheme(_ scheme: TagScheme) -> TextStyle {
-    return .based(on: self) { $0.tagScheme = scheme }
+    modifyingCopy(by: \.tagScheme, with: scheme)
   }
   
+}
+
+private extension TextStyle {
+  
+  func modifyingCopy<T>(by keyPath: WritableKeyPath<TextStyle, T>, with: T) -> TextStyle {
+    var based = TextStyle.based(on: self)
+    based[keyPath: keyPath] = with
+    return based
+  }
 }
