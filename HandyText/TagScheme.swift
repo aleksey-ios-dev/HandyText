@@ -22,7 +22,7 @@ public class TagScheme {
   }
   
   func modifier(for tag: String) -> TextStyleModifier {
-    return map[tag] ?? { $0 }
+    map[tag] ?? { $0 }
   }
   
 }

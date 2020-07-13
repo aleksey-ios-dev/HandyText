@@ -21,11 +21,11 @@ extension TextStyle {
   //MARK: - Fill color
   
   public func foregroundColor(_ color: UIColor) -> TextStyle {
-    return copy(with: \.foregroundColor, setTo: color)
+    copy(with: \.foregroundColor, setTo: color)
   }
   
   public func backgroundColor(_ color: UIColor) -> TextStyle {
-    return copy(with: \.backgroundColor, setTo: color)
+    copy(with: \.backgroundColor, setTo: color)
   }
   
   //MARK: - Size
@@ -214,9 +214,10 @@ extension TextStyle {
 
 private extension TextStyle {
   
-  func copy<T>(with keyPath: WritableKeyPath<TextStyle, T>, setTo: T) -> TextStyle {
-    var based = TextStyle.based(on: self)
-    based[keyPath: keyPath] = setTo
-    return based
+  func copy<T>(with keyPath: WritableKeyPath<TextStyle, T>,
+               setTo value: T) -> TextStyle {
+    var copy = TextStyle.based(on: self)
+    copy[keyPath: keyPath] = value
+    return copy
   }
 }

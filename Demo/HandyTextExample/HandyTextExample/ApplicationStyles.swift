@@ -13,14 +13,14 @@ extension TextStyle {
   static var plainText = TextStyle(font: .georgia).dynamicFontStyle(.body)
   
   static var url: TextStyle {
-    return plainText
+    plainText
       .foregroundColor(.blue)
       .italic()
       .underline(.single)
   }
   
   static var header: TextStyle {
-    return plainText
+    plainText
       .sizeMultiplied(by: 1.4)
       .foregroundColor(.orange)
       .uppercase()
@@ -32,7 +32,7 @@ extension TextStyle {
     shadow.shadowOffset = CGSize(width: 1.0, height: 1.0)
     shadow.shadowBlurRadius = 1.0
     shadow.shadowColor = UIColor.lightGray
-
+    
     return header
       .foregroundColor(.black)
       .shadow(shadow)
