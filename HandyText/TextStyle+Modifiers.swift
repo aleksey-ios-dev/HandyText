@@ -64,6 +64,10 @@ extension TextStyle {
     copy(with: \.thickness, setTo: .medium)
   }
   
+  public func semibold() -> TextStyle {
+    copy(with: \.thickness, setTo: .semibold)
+  }
+  
   public func bold() -> TextStyle {
     copy(with: \.thickness, setTo: .bold)
   }

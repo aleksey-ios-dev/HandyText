@@ -8,7 +8,7 @@
 public struct Font {
 
   public enum Thickness {
-    case extralight, light, regular, medium, bold, heavy, extraheavy
+    case extralight, light, regular, medium, semibold, bold, heavy, extraheavy
   }
 
   public let extralight: String
@@ -19,6 +19,8 @@ public struct Font {
   public let italic: String
   public let medium: String
   public let mediumItalic: String
+  public let semibold: String
+  public let semiboldItalic: String
   public let bold: String
   public let boldItalic: String
   public let heavy: String
@@ -35,6 +37,8 @@ public struct Font {
     italic: String = "",
     medium: String = "",
     mediumItalic: String = "",
+    semibold: String = "",
+    semiboldItalic: String = "",
     bold: String = "",
     boldItalic: String = "",
     heavy: String = "",
@@ -50,6 +54,8 @@ public struct Font {
     self.italic = italic
     self.medium = medium
     self.mediumItalic = mediumItalic
+    self.semibold = semibold
+    self.semiboldItalic = semiboldItalic
     self.bold = bold
     self.boldItalic = boldItalic
     self.heavy = heavy

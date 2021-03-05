@@ -77,6 +77,7 @@ public struct TextStyle {
     case .light: return isItalic ? font.lightItalic : font.light
     case .regular: return isItalic ? font.italic : font.regular
     case .medium: return isItalic ? font.mediumItalic : font.medium
+    case .semibold: return isItalic ? font.semiboldItalic : font.semibold
     case .bold: return isItalic ? font.boldItalic : font.bold
     case .heavy: return isItalic ? font.heavyItalic : font.heavy
     case .extraheavy: return isItalic ? font.extraheavyItalic : font.extraheavy
