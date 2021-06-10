@@ -202,6 +202,14 @@ extension TextStyle {
     copy(with: \.paragraphStyle.lineSpacing, setTo: spacing)
   }
   
+  public func minLineHeight(_ height: CGFloat) -> TextStyle {
+    copy(with: \.paragraphStyle.minimumLineHeight, setTo: height)
+  }
+  
+  public func maxLineHeight(_ height: CGFloat) -> TextStyle {
+    copy(with: \.paragraphStyle.maximumLineHeight, setTo: height)
+  }
+  
   // MARK: - Letter spacing
   
   public func letterSpacing(_ spacing: CGFloat) -> TextStyle {
