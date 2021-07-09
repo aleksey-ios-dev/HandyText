@@ -216,6 +216,12 @@ extension TextStyle {
     copy(with: \.letterSpacing, setTo: spacing)
   }
   
+  // MARK: - Hyphenation
+  
+  public func hyphenationFactor(_ factor: Float) -> TextStyle {
+    copy(with: \.paragraphStyle.hyphenationFactor, setTo: factor)
+  }
+  
   // MARK: - Tag scheme
   
   public func tagScheme(_ scheme: TagScheme) -> TextStyle {
