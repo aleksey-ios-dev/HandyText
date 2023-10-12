@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HandyText
 
 class ViewController: UIViewController {
   
