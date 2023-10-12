@@ -14,7 +14,7 @@
 		5B31FAE71DF45BE900EC9D42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FAE51DF45BE900EC9D42 /* LaunchScreen.storyboard */; };
 		5BC2FEF51DF50C3900463413 /* ApplicationFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2FEF31DF50C3900463413 /* ApplicationFonts.swift */; };
 		5BC2FEF61DF50C3900463413 /* ApplicationStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2FEF41DF50C3900463413 /* ApplicationStyles.swift */; };
-		CCA01A142AD835D800B0CAB1 /* HandyText in Frameworks */ = {isa = PBXBuildFile; productRef = CCA01A132AD835D800B0CAB1 /* HandyText */; };
+		CCA01A182AD8393E00B0CAB1 /* HandyText in Frameworks */ = {isa = PBXBuildFile; productRef = CCA01A172AD8393E00B0CAB1 /* HandyText */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		5B31FAE81DF45BE900EC9D42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC2FEF31DF50C3900463413 /* ApplicationFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFonts.swift; sourceTree = "<group>"; };
 		5BC2FEF41DF50C3900463413 /* ApplicationStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStyles.swift; sourceTree = "<group>"; };
-		CCA01A112AD835B000B0CAB1 /* HandyText */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HandyText; path = ../../HandyText; sourceTree = "<group>"; };
+		CCA01A162AD8393200B0CAB1 /* HandyText */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HandyText; path = ../../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCA01A142AD835D800B0CAB1 /* HandyText in Frameworks */,
+				CCA01A182AD8393E00B0CAB1 /* HandyText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +45,7 @@
 		5B31FAD01DF45BE900EC9D42 = {
 			isa = PBXGroup;
 			children = (
-				CCA01A112AD835B000B0CAB1 /* HandyText */,
+				CCA01A152AD8393200B0CAB1 /* Packages */,
 				5B31FADB1DF45BE900EC9D42 /* HandyTextExample */,
 				5B31FADA1DF45BE900EC9D42 /* Products */,
 				CCA01A122AD835D800B0CAB1 /* Frameworks */,
@@ -82,6 +82,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CCA01A152AD8393200B0CAB1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CCA01A162AD8393200B0CAB1 /* HandyText */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,7 +107,7 @@
 			);
 			name = HandyTextExample;
 			packageProductDependencies = (
-				CCA01A132AD835D800B0CAB1 /* HandyText */,
+				CCA01A172AD8393E00B0CAB1 /* HandyText */,
 			);
 			productName = HandyTextExample;
 			productReference = 5B31FAD91DF45BE900EC9D42 /* HandyTextExample.app */;
@@ -359,7 +367,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CCA01A132AD835D800B0CAB1 /* HandyText */ = {
+		CCA01A172AD8393E00B0CAB1 /* HandyText */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = HandyText;
 		};
