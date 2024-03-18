@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,18 +12,9 @@
 		5B31FAE21DF45BE900EC9D42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FAE01DF45BE900EC9D42 /* Main.storyboard */; };
 		5B31FAE41DF45BE900EC9D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FAE31DF45BE900EC9D42 /* Assets.xcassets */; };
 		5B31FAE71DF45BE900EC9D42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B31FAE51DF45BE900EC9D42 /* LaunchScreen.storyboard */; };
-		5B31FAF91DF45D5200EC9D42 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAEF1DF45D5200EC9D42 /* Font.swift */; };
-		5B31FAFA1DF45D5200EC9D42 /* NSAttributedString+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF01DF45D5200EC9D42 /* NSAttributedString+TextStyle.swift */; };
-		5B31FAFB1DF45D5200EC9D42 /* String+TagScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF11DF45D5200EC9D42 /* String+TagScheme.swift */; };
-		5B31FAFC1DF45D5200EC9D42 /* String+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF21DF45D5200EC9D42 /* String+TextStyle.swift */; };
-		5B31FAFD1DF45D5200EC9D42 /* TagScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF31DF45D5200EC9D42 /* TagScheme.swift */; };
-		5B31FAFE1DF45D5200EC9D42 /* TextStyle+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF41DF45D5200EC9D42 /* TextStyle+Modifiers.swift */; };
-		5B31FAFF1DF45D5200EC9D42 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF51DF45D5200EC9D42 /* TextStyle.swift */; };
-		5B31FB001DF45D5200EC9D42 /* TextStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF61DF45D5200EC9D42 /* TextStyleApplicable.swift */; };
-		5B31FB011DF45D5200EC9D42 /* UIBarButtonItem+TextStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF71DF45D5200EC9D42 /* UIBarButtonItem+TextStyleApplicable.swift */; };
-		5B31FB021DF45D5200EC9D42 /* UINavigationBar+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31FAF81DF45D5200EC9D42 /* UINavigationBar+TextStyle.swift */; };
 		5BC2FEF51DF50C3900463413 /* ApplicationFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2FEF31DF50C3900463413 /* ApplicationFonts.swift */; };
 		5BC2FEF61DF50C3900463413 /* ApplicationStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2FEF41DF50C3900463413 /* ApplicationStyles.swift */; };
+		CCA01A182AD8393E00B0CAB1 /* HandyText in Frameworks */ = {isa = PBXBuildFile; productRef = CCA01A172AD8393E00B0CAB1 /* HandyText */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,18 +25,9 @@
 		5B31FAE31DF45BE900EC9D42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B31FAE61DF45BE900EC9D42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B31FAE81DF45BE900EC9D42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B31FAEF1DF45D5200EC9D42 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		5B31FAF01DF45D5200EC9D42 /* NSAttributedString+TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+TextStyle.swift"; sourceTree = "<group>"; };
-		5B31FAF11DF45D5200EC9D42 /* String+TagScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TagScheme.swift"; sourceTree = "<group>"; };
-		5B31FAF21DF45D5200EC9D42 /* String+TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TextStyle.swift"; sourceTree = "<group>"; };
-		5B31FAF31DF45D5200EC9D42 /* TagScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagScheme.swift; sourceTree = "<group>"; };
-		5B31FAF41DF45D5200EC9D42 /* TextStyle+Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextStyle+Modifiers.swift"; sourceTree = "<group>"; };
-		5B31FAF51DF45D5200EC9D42 /* TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
-		5B31FAF61DF45D5200EC9D42 /* TextStyleApplicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyleApplicable.swift; sourceTree = "<group>"; };
-		5B31FAF71DF45D5200EC9D42 /* UIBarButtonItem+TextStyleApplicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+TextStyleApplicable.swift"; sourceTree = "<group>"; };
-		5B31FAF81DF45D5200EC9D42 /* UINavigationBar+TextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+TextStyle.swift"; sourceTree = "<group>"; };
 		5BC2FEF31DF50C3900463413 /* ApplicationFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFonts.swift; sourceTree = "<group>"; };
 		5BC2FEF41DF50C3900463413 /* ApplicationStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStyles.swift; sourceTree = "<group>"; };
+		CCA01A162AD8393200B0CAB1 /* HandyText */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HandyText; path = ../../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA01A182AD8393E00B0CAB1 /* HandyText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +45,10 @@
 		5B31FAD01DF45BE900EC9D42 = {
 			isa = PBXGroup;
 			children = (
-				5B31FAEE1DF45D5200EC9D42 /* HandyText */,
+				CCA01A152AD8393200B0CAB1 /* Packages */,
 				5B31FADB1DF45BE900EC9D42 /* HandyTextExample */,
 				5B31FADA1DF45BE900EC9D42 /* Products */,
+				CCA01A122AD835D800B0CAB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,22 +75,19 @@
 			path = HandyTextExample;
 			sourceTree = "<group>";
 		};
-		5B31FAEE1DF45D5200EC9D42 /* HandyText */ = {
+		CCA01A122AD835D800B0CAB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5B31FAEF1DF45D5200EC9D42 /* Font.swift */,
-				5B31FAF01DF45D5200EC9D42 /* NSAttributedString+TextStyle.swift */,
-				5B31FAF11DF45D5200EC9D42 /* String+TagScheme.swift */,
-				5B31FAF21DF45D5200EC9D42 /* String+TextStyle.swift */,
-				5B31FAF31DF45D5200EC9D42 /* TagScheme.swift */,
-				5B31FAF41DF45D5200EC9D42 /* TextStyle+Modifiers.swift */,
-				5B31FAF51DF45D5200EC9D42 /* TextStyle.swift */,
-				5B31FAF61DF45D5200EC9D42 /* TextStyleApplicable.swift */,
-				5B31FAF71DF45D5200EC9D42 /* UIBarButtonItem+TextStyleApplicable.swift */,
-				5B31FAF81DF45D5200EC9D42 /* UINavigationBar+TextStyle.swift */,
 			);
-			name = HandyText;
-			path = ../../HandyText;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA01A152AD8393200B0CAB1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CCA01A162AD8393200B0CAB1 /* HandyText */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +106,9 @@
 			dependencies = (
 			);
 			name = HandyTextExample;
+			packageProductDependencies = (
+				CCA01A172AD8393E00B0CAB1 /* HandyText */,
+			);
 			productName = HandyTextExample;
 			productReference = 5B31FAD91DF45BE900EC9D42 /* HandyTextExample.app */;
 			productType = "com.apple.product-type.application";
@@ -183,18 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC2FEF61DF50C3900463413 /* ApplicationStyles.swift in Sources */,
-				5B31FAFF1DF45D5200EC9D42 /* TextStyle.swift in Sources */,
-				5B31FB011DF45D5200EC9D42 /* UIBarButtonItem+TextStyleApplicable.swift in Sources */,
-				5B31FB001DF45D5200EC9D42 /* TextStyleApplicable.swift in Sources */,
 				5B31FADF1DF45BE900EC9D42 /* ViewController.swift in Sources */,
 				5B31FADD1DF45BE900EC9D42 /* AppDelegate.swift in Sources */,
-				5B31FAFD1DF45D5200EC9D42 /* TagScheme.swift in Sources */,
-				5B31FB021DF45D5200EC9D42 /* UINavigationBar+TextStyle.swift in Sources */,
-				5B31FAFA1DF45D5200EC9D42 /* NSAttributedString+TextStyle.swift in Sources */,
-				5B31FAFB1DF45D5200EC9D42 /* String+TagScheme.swift in Sources */,
-				5B31FAF91DF45D5200EC9D42 /* Font.swift in Sources */,
-				5B31FAFC1DF45D5200EC9D42 /* String+TextStyle.swift in Sources */,
-				5B31FAFE1DF45D5200EC9D42 /* TextStyle+Modifiers.swift in Sources */,
 				5BC2FEF51DF50C3900463413 /* ApplicationFonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +303,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -341,7 +316,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HandyTextExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.HandyTextExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -353,7 +332,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HandyTextExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.HandyTextExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -382,6 +365,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCA01A172AD8393E00B0CAB1 /* HandyText */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HandyText;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B31FAD11DF45BE900EC9D42 /* Project object */;
 }

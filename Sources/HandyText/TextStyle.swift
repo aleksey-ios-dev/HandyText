@@ -9,7 +9,7 @@ import UIKit
 
 //TODO: generate attributes on demand to avoid recalculations
 
-public class TextStyle {
+open class TextStyle {
     
     public enum BaselineOffset {
         case none

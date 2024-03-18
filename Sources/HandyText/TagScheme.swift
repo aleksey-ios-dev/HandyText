@@ -9,7 +9,7 @@ import Foundation
 
 public typealias TextStyleModifier = (TextStyle) -> TextStyle
 
-public class TagScheme {
+open class TagScheme {
   
   private var map = [String: TextStyleModifier]()
   
